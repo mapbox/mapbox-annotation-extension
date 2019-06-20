@@ -3,14 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		07CBD7EC22B8570400732884 /* annotations_framework_extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CBD7EA22B8570400732884 /* annotations_framework_extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07CBD7F422B9987200732884 /* SaySomething.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CBD7F222B9987200732884 /* SaySomething.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07CBD7F522B9987200732884 /* SaySomething.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CBD7F322B9987200732884 /* SaySomething.m */; };
+		1F40B9AC22BC1B03003DB389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9AB22BC1B03003DB389 /* AppDelegate.swift */; };
+		1F40B9AE22BC1B03003DB389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9AD22BC1B03003DB389 /* ViewController.swift */; };
+		1F40B9B122BC1B03003DB389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F40B9AF22BC1B03003DB389 /* Main.storyboard */; };
+		1F40B9B322BC1B05003DB389 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F40B9B222BC1B05003DB389 /* Assets.xcassets */; };
+		1F40B9B622BC1B05003DB389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F40B9B422BC1B05003DB389 /* LaunchScreen.storyboard */; };
+		1F40B9C122BC1B05003DB389 /* annotationappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9C022BC1B05003DB389 /* annotationappTests.swift */; };
+		372699A6A03B0EEA9FE92DD9 /* Pods_annotationapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38AF688BC1F6AD1BA4503AF /* Pods_annotationapp.framework */; };
+		57F34F93DFF168005B061B50 /* Pods_annotations_framework_extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6418F995FFB6A73C3D9D22FF /* Pods_annotations_framework_extension.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F40B9BD22BC1B05003DB389 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07CBD7DE22B8570400732884 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F40B9A822BC1B03003DB389;
+			remoteInfo = annotationapp;
+		};
+		1F40B9CB22BC20F3003DB389 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07CBD7DE22B8570400732884 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07CBD7E622B8570400732884;
+			remoteInfo = "annotations-framework-extension";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		07CBD7E722B8570400732884 /* annotations_framework_extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = annotations_framework_extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -18,10 +43,42 @@
 		07CBD7EB22B8570400732884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07CBD7F222B9987200732884 /* SaySomething.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaySomething.h; sourceTree = "<group>"; };
 		07CBD7F322B9987200732884 /* SaySomething.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaySomething.m; sourceTree = "<group>"; };
+		1BDEECA79ABC64ED33D61483 /* Pods-annotationapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-annotationapp.debug.xcconfig"; path = "Target Support Files/Pods-annotationapp/Pods-annotationapp.debug.xcconfig"; sourceTree = "<group>"; };
+		1F40B9A922BC1B03003DB389 /* annotationapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = annotationapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F40B9AB22BC1B03003DB389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F40B9AD22BC1B03003DB389 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F40B9B022BC1B03003DB389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F40B9B222BC1B05003DB389 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F40B9B522BC1B05003DB389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F40B9B722BC1B05003DB389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F40B9BC22BC1B05003DB389 /* annotationappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = annotationappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F40B9C022BC1B05003DB389 /* annotationappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = annotationappTests.swift; sourceTree = "<group>"; };
+		1F40B9C222BC1B05003DB389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26E77B23BBD30F6F235857DC /* Pods-annotations-framework-extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-annotations-framework-extension.debug.xcconfig"; path = "Target Support Files/Pods-annotations-framework-extension/Pods-annotations-framework-extension.debug.xcconfig"; sourceTree = "<group>"; };
+		6418F995FFB6A73C3D9D22FF /* Pods_annotations_framework_extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_annotations_framework_extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B53066538961005A56AE6BE /* Pods-annotations-framework-extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-annotations-framework-extension.release.xcconfig"; path = "Target Support Files/Pods-annotations-framework-extension/Pods-annotations-framework-extension.release.xcconfig"; sourceTree = "<group>"; };
+		DF334744709F801E4EE94EAE /* Pods-annotationapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-annotationapp.release.xcconfig"; path = "Target Support Files/Pods-annotationapp/Pods-annotationapp.release.xcconfig"; sourceTree = "<group>"; };
+		F38AF688BC1F6AD1BA4503AF /* Pods_annotationapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_annotationapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		07CBD7E422B8570400732884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57F34F93DFF168005B061B50 /* Pods_annotations_framework_extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F40B9A622BC1B03003DB389 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372699A6A03B0EEA9FE92DD9 /* Pods_annotationapp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F40B9B922BC1B05003DB389 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,7 +92,11 @@
 			isa = PBXGroup;
 			children = (
 				07CBD7E922B8570400732884 /* annotations-framework-extension */,
+				1F40B9AA22BC1B03003DB389 /* annotationapp */,
+				1F40B9BF22BC1B05003DB389 /* annotationappTests */,
 				07CBD7E822B8570400732884 /* Products */,
+				EB091C6C074C35269E8976B8 /* Pods */,
+				692128449CDA8E992901FCCE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -43,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				07CBD7E722B8570400732884 /* annotations_framework_extension.framework */,
+				1F40B9A922BC1B03003DB389 /* annotationapp.app */,
+				1F40B9BC22BC1B05003DB389 /* annotationappTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,12 +113,70 @@
 		07CBD7E922B8570400732884 /* annotations-framework-extension */ = {
 			isa = PBXGroup;
 			children = (
+				1F40B9CA22BC1B3C003DB389 /* Annotation */,
+				1F40B9C922BC1B2E003DB389 /* Controller */,
 				07CBD7EA22B8570400732884 /* annotations_framework_extension.h */,
 				07CBD7EB22B8570400732884 /* Info.plist */,
 				07CBD7F222B9987200732884 /* SaySomething.h */,
 				07CBD7F322B9987200732884 /* SaySomething.m */,
 			);
 			path = "annotations-framework-extension";
+			sourceTree = "<group>";
+		};
+		1F40B9AA22BC1B03003DB389 /* annotationapp */ = {
+			isa = PBXGroup;
+			children = (
+				1F40B9AB22BC1B03003DB389 /* AppDelegate.swift */,
+				1F40B9AD22BC1B03003DB389 /* ViewController.swift */,
+				1F40B9AF22BC1B03003DB389 /* Main.storyboard */,
+				1F40B9B222BC1B05003DB389 /* Assets.xcassets */,
+				1F40B9B422BC1B05003DB389 /* LaunchScreen.storyboard */,
+				1F40B9B722BC1B05003DB389 /* Info.plist */,
+			);
+			path = annotationapp;
+			sourceTree = "<group>";
+		};
+		1F40B9BF22BC1B05003DB389 /* annotationappTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F40B9C022BC1B05003DB389 /* annotationappTests.swift */,
+				1F40B9C222BC1B05003DB389 /* Info.plist */,
+			);
+			path = annotationappTests;
+			sourceTree = "<group>";
+		};
+		1F40B9C922BC1B2E003DB389 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1F40B9CA22BC1B3C003DB389 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		692128449CDA8E992901FCCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6418F995FFB6A73C3D9D22FF /* Pods_annotations_framework_extension.framework */,
+				F38AF688BC1F6AD1BA4503AF /* Pods_annotationapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB091C6C074C35269E8976B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BDEECA79ABC64ED33D61483 /* Pods-annotationapp.debug.xcconfig */,
+				DF334744709F801E4EE94EAE /* Pods-annotationapp.release.xcconfig */,
+				26E77B23BBD30F6F235857DC /* Pods-annotations-framework-extension.debug.xcconfig */,
+				8B53066538961005A56AE6BE /* Pods-annotations-framework-extension.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +198,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07CBD7EF22B8570400732884 /* Build configuration list for PBXNativeTarget "annotations-framework-extension" */;
 			buildPhases = (
+				2E3DA699DCCB584159BE8452 /* [CP] Check Pods Manifest.lock */,
 				07CBD7E222B8570400732884 /* Headers */,
 				07CBD7E322B8570400732884 /* Sources */,
 				07CBD7E422B8570400732884 /* Frameworks */,
@@ -91,17 +213,63 @@
 			productReference = 07CBD7E722B8570400732884 /* annotations_framework_extension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		1F40B9A822BC1B03003DB389 /* annotationapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F40B9C722BC1B05003DB389 /* Build configuration list for PBXNativeTarget "annotationapp" */;
+			buildPhases = (
+				97DEF6868EBC6E772F04E9AC /* [CP] Check Pods Manifest.lock */,
+				1F40B9A522BC1B03003DB389 /* Sources */,
+				1F40B9A622BC1B03003DB389 /* Frameworks */,
+				1F40B9A722BC1B03003DB389 /* Resources */,
+				AFB8D76DBCE3768DF55B2C2C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F40B9CC22BC20F3003DB389 /* PBXTargetDependency */,
+			);
+			name = annotationapp;
+			productName = annotationapp;
+			productReference = 1F40B9A922BC1B03003DB389 /* annotationapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F40B9BB22BC1B05003DB389 /* annotationappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F40B9C822BC1B05003DB389 /* Build configuration list for PBXNativeTarget "annotationappTests" */;
+			buildPhases = (
+				1F40B9B822BC1B05003DB389 /* Sources */,
+				1F40B9B922BC1B05003DB389 /* Frameworks */,
+				1F40B9BA22BC1B05003DB389 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F40B9BE22BC1B05003DB389 /* PBXTargetDependency */,
+			);
+			name = annotationappTests;
+			productName = annotationappTests;
+			productReference = 1F40B9BC22BC1B05003DB389 /* annotationappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		07CBD7DE22B8570400732884 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = mapbox;
 				TargetAttributes = {
 					07CBD7E622B8570400732884 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					1F40B9A822BC1B03003DB389 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					1F40B9BB22BC1B05003DB389 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 1F40B9A822BC1B03003DB389;
 					};
 				};
 			};
@@ -111,6 +279,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 07CBD7DD22B8570400732884;
 			productRefGroup = 07CBD7E822B8570400732884 /* Products */;
@@ -118,6 +287,8 @@
 			projectRoot = "";
 			targets = (
 				07CBD7E622B8570400732884 /* annotations-framework-extension */,
+				1F40B9A822BC1B03003DB389 /* annotationapp */,
+				1F40B9BB22BC1B05003DB389 /* annotationappTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,7 +301,88 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F40B9A722BC1B03003DB389 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F40B9B622BC1B05003DB389 /* LaunchScreen.storyboard in Resources */,
+				1F40B9B322BC1B05003DB389 /* Assets.xcassets in Resources */,
+				1F40B9B122BC1B03003DB389 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F40B9BA22BC1B05003DB389 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E3DA699DCCB584159BE8452 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-annotations-framework-extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97DEF6868EBC6E772F04E9AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-annotationapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFB8D76DBCE3768DF55B2C2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-annotationapp/Pods-annotationapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-annotationapp/Pods-annotationapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-annotationapp/Pods-annotationapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07CBD7E322B8570400732884 /* Sources */ = {
@@ -141,7 +393,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F40B9A522BC1B03003DB389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F40B9AE22BC1B03003DB389 /* ViewController.swift in Sources */,
+				1F40B9AC22BC1B03003DB389 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F40B9B822BC1B05003DB389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F40B9C122BC1B05003DB389 /* annotationappTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F40B9BE22BC1B05003DB389 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F40B9A822BC1B03003DB389 /* annotationapp */;
+			targetProxy = 1F40B9BD22BC1B05003DB389 /* PBXContainerItemProxy */;
+		};
+		1F40B9CC22BC20F3003DB389 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07CBD7E622B8570400732884 /* annotations-framework-extension */;
+			targetProxy = 1F40B9CB22BC20F3003DB389 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F40B9AF22BC1B03003DB389 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F40B9B022BC1B03003DB389 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F40B9B422BC1B05003DB389 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F40B9B522BC1B05003DB389 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		07CBD7ED22B8570400732884 /* Debug */ = {
@@ -264,6 +565,7 @@
 		};
 		07CBD7F022B8570400732884 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26E77B23BBD30F6F235857DC /* Pods-annotations-framework-extension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -289,6 +591,7 @@
 		};
 		07CBD7F122B8570400732884 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B53066538961005A56AE6BE /* Pods-annotations-framework-extension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +615,98 @@
 			};
 			name = Release;
 		};
+		1F40B9C322BC1B05003DB389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDEECA79ABC64ED33D61483 /* Pods-annotationapp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26847786Y6;
+				INFOPLIST_FILE = annotationapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.annotationapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F40B9C422BC1B05003DB389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF334744709F801E4EE94EAE /* Pods-annotationapp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26847786Y6;
+				INFOPLIST_FILE = annotationapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.annotationapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1F40B9C522BC1B05003DB389 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26847786Y6;
+				INFOPLIST_FILE = annotationappTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.annotationappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/annotationapp.app/annotationapp";
+			};
+			name = Debug;
+		};
+		1F40B9C622BC1B05003DB389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 26847786Y6;
+				INFOPLIST_FILE = annotationappTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.annotationappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/annotationapp.app/annotationapp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -329,6 +724,24 @@
 			buildConfigurations = (
 				07CBD7F022B8570400732884 /* Debug */,
 				07CBD7F122B8570400732884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F40B9C722BC1B05003DB389 /* Build configuration list for PBXNativeTarget "annotationapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F40B9C322BC1B05003DB389 /* Debug */,
+				1F40B9C422BC1B05003DB389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F40B9C822BC1B05003DB389 /* Build configuration list for PBXNativeTarget "annotationappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F40B9C522BC1B05003DB389 /* Debug */,
+				1F40B9C622BC1B05003DB389 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
