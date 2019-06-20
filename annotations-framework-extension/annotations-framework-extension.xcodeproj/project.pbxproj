@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		07CBD7EC22B8570400732884 /* annotations_framework_extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CBD7EA22B8570400732884 /* annotations_framework_extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07CBD7F422B9987200732884 /* SaySomething.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CBD7F222B9987200732884 /* SaySomething.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07CBD7F522B9987200732884 /* SaySomething.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CBD7F322B9987200732884 /* SaySomething.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07CBD7E722B8570400732884 /* annotations_framework_extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = annotations_framework_extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CBD7EA22B8570400732884 /* annotations_framework_extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = annotations_framework_extension.h; sourceTree = "<group>"; };
 		07CBD7EB22B8570400732884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07CBD7F222B9987200732884 /* SaySomething.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaySomething.h; sourceTree = "<group>"; };
+		07CBD7F322B9987200732884 /* SaySomething.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaySomething.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			children = (
 				07CBD7EA22B8570400732884 /* annotations_framework_extension.h */,
 				07CBD7EB22B8570400732884 /* Info.plist */,
+				07CBD7F222B9987200732884 /* SaySomething.h */,
+				07CBD7F322B9987200732884 /* SaySomething.m */,
 			);
 			path = "annotations-framework-extension";
 			sourceTree = "<group>";
@@ -60,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07CBD7EC22B8570400732884 /* annotations_framework_extension.h in Headers */,
+				07CBD7F422B9987200732884 /* SaySomething.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CBD7F522B9987200732884 /* SaySomething.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

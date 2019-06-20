@@ -1,0 +1,3 @@
+[submodule "jazzy-theme"]
+	path = annotations-framework-extension/documentation/jazzy-theme
+	url = https://github.com/mapbox/jazzy-theme.git

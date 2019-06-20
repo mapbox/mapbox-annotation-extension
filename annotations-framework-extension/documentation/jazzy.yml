@@ -1,0 +1,15 @@
+module: Annotations Extension
+author: Mapbox
+author_url: https://www.mapbox.com/
+github_url: https://github.com/mapbox/map-extensions-ios
+copyright: '© 2014–2019 [Mapbox](https://www.mapbox.com/).'
+
+head: |
+  <link rel='shortcut icon' href='https://www.mapbox.com/img/favicon.ico' type='image/x-icon' />
+objc: Yes
+sdk: iphonesimulator
+skip_undocumented: Yes
+hide_documentation_coverage: Yes
+umbrella_header: ../annotations-framework-extension/annotations_framework_extension.h
+framework_root: ../annotations-framework-extension
+theme: jazzy-theme

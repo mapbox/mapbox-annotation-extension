@@ -8,4 +8,6 @@ FOUNDATION_EXPORT const unsigned char annotations_framework_extensionVersionStri
 
 // In this header, you should import all the public headers of your framework using statements like #import <annotations_framework_extension/PublicHeader.h>
 
+#import "SaySomething.h"
+
 
