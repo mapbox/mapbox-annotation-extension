@@ -3,7 +3,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MGLStymbolStyleAnnotation : MGLStyleAnnotation
+@interface MGLSymbolStyleAnnotation : MGLStyleAnnotation
 
 @property (nonatomic, assign) CGFloat iconAnchor;
 @property (nonatomic, strong) NSString *iconImageName;

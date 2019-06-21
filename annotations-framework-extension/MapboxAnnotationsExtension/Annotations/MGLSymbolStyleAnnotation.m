@@ -1,4 +1,4 @@
-#import "MGLStymbolStyleAnnotation.h"
+#import "MGLSymbolStyleAnnotation.h"
 
 static NSString * const MGLPropertyIconSize = @"";
 static NSString * const MGLPropertyIconImage = @"";
@@ -30,7 +30,7 @@ static NSString * const MGLPropertyTextHaloBlur = @"";
 static NSString * const MGLPropertySymbolSortKey = @"";
 static NSString * const MGLPropertyMaximumTextWidth = @"";
 
-@implementation MGLStymbolStyleAnnotation
+@implementation MGLSymbolStyleAnnotation
 
 - (instancetype)init:(CLLocationCoordinate2D)coordinate {
     if (self = [super init]) {
