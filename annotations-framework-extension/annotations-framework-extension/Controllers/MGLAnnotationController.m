@@ -18,27 +18,27 @@
     return self;
 }
 
-- (void)addStyledAnnotation:(MGLStyledAnnotation *)styledAnnotation {
+- (void)addStyleAnnotation:(MGLStyleAnnotation *)styleAnnotation {
     
 }
 
-- (void)addStyledAnnotations:(NSArray<MGLStyledAnnotation *> *)styledAnnotations {
+- (void)addStyleAnnotations:(NSArray<MGLStyleAnnotation *> *)styleAnnotations {
     
 }
 
-- (void)removeStyledAnnotation:(MGLStyledAnnotation *)styledAnnotation {
+- (void)removeStyleAnnotation:(MGLStyleAnnotation *)styleAnnotation {
     
 }
 
-- (void)removeStyledAnnotations:(NSArray<MGLStyledAnnotation *> *)styledAnnotations {
+- (void)removeStyleAnnotations:(NSArray<MGLStyleAnnotation *> *)styleAnnotations {
     
 }
 
-- (void)updateStyledAnnotation:(MGLStyledAnnotation *)styledAnnotation {
+- (void)updateStyleAnnotation:(MGLStyleAnnotation *)styleAnnotation {
     
 }
 
-- (void)updateStyledAnnotations:(NSArray<MGLStyledAnnotation *> *)styledAnnotations {
+- (void)updateStyleAnnotations:(NSArray<MGLStyleAnnotation *> *)styleAnnotations {
     
 }
 
