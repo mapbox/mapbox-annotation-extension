@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		078F5F0B22BC3DA300460948 /* MGLStyleAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 078F5F0922BC3DA300460948 /* MGLStyleAnnotation.h */; };
+		078F5F0C22BC3DA300460948 /* MGLStyleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 078F5F0A22BC3DA300460948 /* MGLStyleAnnotation.m */; };
 		07CBD7EC22B8570400732884 /* annotations_framework_extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CBD7EA22B8570400732884 /* annotations_framework_extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07CBD7F422B9987200732884 /* SaySomething.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CBD7F222B9987200732884 /* SaySomething.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07CBD7F522B9987200732884 /* SaySomething.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CBD7F322B9987200732884 /* SaySomething.m */; };
 		1F40B9AC22BC1B03003DB389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9AB22BC1B03003DB389 /* AppDelegate.swift */; };
 		1F40B9AE22BC1B03003DB389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9AD22BC1B03003DB389 /* ViewController.swift */; };
 		1F40B9B122BC1B03003DB389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F40B9AF22BC1B03003DB389 /* Main.storyboard */; };
@@ -38,11 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		078F5F0922BC3DA300460948 /* MGLStyleAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MGLStyleAnnotation.h; path = "annotations-framework-extension/MGLStyleAnnotation.h"; sourceTree = SOURCE_ROOT; };
+		078F5F0A22BC3DA300460948 /* MGLStyleAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MGLStyleAnnotation.m; path = "annotations-framework-extension/MGLStyleAnnotation.m"; sourceTree = SOURCE_ROOT; };
 		07CBD7E722B8570400732884 /* annotations_framework_extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = annotations_framework_extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CBD7EA22B8570400732884 /* annotations_framework_extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = annotations_framework_extension.h; sourceTree = "<group>"; };
 		07CBD7EB22B8570400732884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07CBD7F222B9987200732884 /* SaySomething.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaySomething.h; sourceTree = "<group>"; };
-		07CBD7F322B9987200732884 /* SaySomething.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaySomething.m; sourceTree = "<group>"; };
 		1BDEECA79ABC64ED33D61483 /* Pods-annotationapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-annotationapp.debug.xcconfig"; path = "Target Support Files/Pods-annotationapp/Pods-annotationapp.debug.xcconfig"; sourceTree = "<group>"; };
 		1F40B9A922BC1B03003DB389 /* annotationapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = annotationapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F40B9AB22BC1B03003DB389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,12 +113,10 @@
 		07CBD7E922B8570400732884 /* annotations-framework-extension */ = {
 			isa = PBXGroup;
 			children = (
-				1F40B9CA22BC1B3C003DB389 /* Annotation */,
-				1F40B9C922BC1B2E003DB389 /* Controller */,
 				07CBD7EA22B8570400732884 /* annotations_framework_extension.h */,
+				1F40B9CA22BC1B3C003DB389 /* Annotations */,
+				1F40B9C922BC1B2E003DB389 /* Controller */,
 				07CBD7EB22B8570400732884 /* Info.plist */,
-				07CBD7F222B9987200732884 /* SaySomething.h */,
-				07CBD7F322B9987200732884 /* SaySomething.m */,
 			);
 			path = "annotations-framework-extension";
 			sourceTree = "<group>";
@@ -152,11 +150,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		1F40B9CA22BC1B3C003DB389 /* Annotation */ = {
+		1F40B9CA22BC1B3C003DB389 /* Annotations */ = {
 			isa = PBXGroup;
 			children = (
+				078F5F0922BC3DA300460948 /* MGLStyleAnnotation.h */,
+				078F5F0A22BC3DA300460948 /* MGLStyleAnnotation.m */,
 			);
-			path = Annotation;
+			path = Annotations;
 			sourceTree = "<group>";
 		};
 		692128449CDA8E992901FCCE /* Frameworks */ = {
@@ -186,8 +186,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078F5F0B22BC3DA300460948 /* MGLStyleAnnotation.h in Headers */,
 				07CBD7EC22B8570400732884 /* annotations_framework_extension.h in Headers */,
-				07CBD7F422B9987200732884 /* SaySomething.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07CBD7F522B9987200732884 /* SaySomething.m in Sources */,
+				078F5F0C22BC3DA300460948 /* MGLStyleAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
