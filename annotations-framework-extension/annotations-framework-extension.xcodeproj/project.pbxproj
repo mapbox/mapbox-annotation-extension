@@ -16,6 +16,17 @@
 		1F40B9B322BC1B05003DB389 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F40B9B222BC1B05003DB389 /* Assets.xcassets */; };
 		1F40B9B622BC1B05003DB389 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F40B9B422BC1B05003DB389 /* LaunchScreen.storyboard */; };
 		1F40B9C122BC1B05003DB389 /* annotationappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9C022BC1B05003DB389 /* annotationappTests.swift */; };
+		1F40B9CF22BC3110003DB389 /* MGLAnnotationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F40B9CD22BC3110003DB389 /* MGLAnnotationController.h */; };
+		1F40B9D022BC3110003DB389 /* MGLAnnotationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9CE22BC3110003DB389 /* MGLAnnotationController.m */; };
+		1F40B9D322BC3136003DB389 /* MGLCircleAnnotationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F40B9D122BC3136003DB389 /* MGLCircleAnnotationController.h */; };
+		1F40B9D422BC3136003DB389 /* MGLCircleAnnotationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9D222BC3136003DB389 /* MGLCircleAnnotationController.m */; };
+		1F40B9D722BC3150003DB389 /* MGLSymbolAnnotationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F40B9D522BC3150003DB389 /* MGLSymbolAnnotationController.h */; };
+		1F40B9D822BC3150003DB389 /* MGLSymbolAnnotationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9D622BC3150003DB389 /* MGLSymbolAnnotationController.m */; };
+		1F40B9DB22BC3164003DB389 /* MGLLineAnnotationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F40B9D922BC3164003DB389 /* MGLLineAnnotationController.h */; };
+		1F40B9DC22BC3164003DB389 /* MGLLineAnnotationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9DA22BC3164003DB389 /* MGLLineAnnotationController.m */; };
+		1F40B9DF22BC31D6003DB389 /* MGLPolygonAnnotationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F40B9DD22BC31D6003DB389 /* MGLPolygonAnnotationController.h */; };
+		1F40B9E022BC31D6003DB389 /* MGLPolygonAnnotationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9DE22BC31D6003DB389 /* MGLPolygonAnnotationController.m */; };
+		1F40B9E322BC523C003DB389 /* MGLAnnotationController_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F40B9E122BC523C003DB389 /* MGLAnnotationController_Private.h */; };
 		372699A6A03B0EEA9FE92DD9 /* Pods_annotationapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38AF688BC1F6AD1BA4503AF /* Pods_annotationapp.framework */; };
 		57F34F93DFF168005B061B50 /* Pods_annotations_framework_extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6418F995FFB6A73C3D9D22FF /* Pods_annotations_framework_extension.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +65,17 @@
 		1F40B9BC22BC1B05003DB389 /* annotationappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = annotationappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F40B9C022BC1B05003DB389 /* annotationappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = annotationappTests.swift; sourceTree = "<group>"; };
 		1F40B9C222BC1B05003DB389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F40B9CD22BC3110003DB389 /* MGLAnnotationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLAnnotationController.h; sourceTree = "<group>"; };
+		1F40B9CE22BC3110003DB389 /* MGLAnnotationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLAnnotationController.m; sourceTree = "<group>"; };
+		1F40B9D122BC3136003DB389 /* MGLCircleAnnotationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLCircleAnnotationController.h; sourceTree = "<group>"; };
+		1F40B9D222BC3136003DB389 /* MGLCircleAnnotationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLCircleAnnotationController.m; sourceTree = "<group>"; };
+		1F40B9D522BC3150003DB389 /* MGLSymbolAnnotationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLSymbolAnnotationController.h; sourceTree = "<group>"; };
+		1F40B9D622BC3150003DB389 /* MGLSymbolAnnotationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLSymbolAnnotationController.m; sourceTree = "<group>"; };
+		1F40B9D922BC3164003DB389 /* MGLLineAnnotationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLLineAnnotationController.h; sourceTree = "<group>"; };
+		1F40B9DA22BC3164003DB389 /* MGLLineAnnotationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLLineAnnotationController.m; sourceTree = "<group>"; };
+		1F40B9DD22BC31D6003DB389 /* MGLPolygonAnnotationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLPolygonAnnotationController.h; sourceTree = "<group>"; };
+		1F40B9DE22BC31D6003DB389 /* MGLPolygonAnnotationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLPolygonAnnotationController.m; sourceTree = "<group>"; };
+		1F40B9E122BC523C003DB389 /* MGLAnnotationController_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLAnnotationController_Private.h; sourceTree = "<group>"; };
 		26E77B23BBD30F6F235857DC /* Pods-annotations-framework-extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-annotations-framework-extension.debug.xcconfig"; path = "Target Support Files/Pods-annotations-framework-extension/Pods-annotations-framework-extension.debug.xcconfig"; sourceTree = "<group>"; };
 		6418F995FFB6A73C3D9D22FF /* Pods_annotations_framework_extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_annotations_framework_extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B53066538961005A56AE6BE /* Pods-annotations-framework-extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-annotations-framework-extension.release.xcconfig"; path = "Target Support Files/Pods-annotations-framework-extension/Pods-annotations-framework-extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +135,8 @@
 		07CBD7E922B8570400732884 /* annotations-framework-extension */ = {
 			isa = PBXGroup;
 			children = (
+				1F40B9CA22BC1B3C003DB389 /* Annotation */,
+				1F40B9C922BC1B2E003DB389 /* Controllers */,
 				07CBD7EA22B8570400732884 /* annotations_framework_extension.h */,
 				1F40B9CA22BC1B3C003DB389 /* Annotations */,
 				1F40B9C922BC1B2E003DB389 /* Controller */,
@@ -143,11 +167,22 @@
 			path = annotationappTests;
 			sourceTree = "<group>";
 		};
-		1F40B9C922BC1B2E003DB389 /* Controller */ = {
+		1F40B9C922BC1B2E003DB389 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1F40B9CD22BC3110003DB389 /* MGLAnnotationController.h */,
+				1F40B9E122BC523C003DB389 /* MGLAnnotationController_Private.h */,
+				1F40B9CE22BC3110003DB389 /* MGLAnnotationController.m */,
+				1F40B9D122BC3136003DB389 /* MGLCircleAnnotationController.h */,
+				1F40B9D222BC3136003DB389 /* MGLCircleAnnotationController.m */,
+				1F40B9D522BC3150003DB389 /* MGLSymbolAnnotationController.h */,
+				1F40B9D622BC3150003DB389 /* MGLSymbolAnnotationController.m */,
+				1F40B9D922BC3164003DB389 /* MGLLineAnnotationController.h */,
+				1F40B9DA22BC3164003DB389 /* MGLLineAnnotationController.m */,
+				1F40B9DD22BC31D6003DB389 /* MGLPolygonAnnotationController.h */,
+				1F40B9DE22BC31D6003DB389 /* MGLPolygonAnnotationController.m */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		1F40B9CA22BC1B3C003DB389 /* Annotations */ = {
@@ -186,7 +221,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F40B9E322BC523C003DB389 /* MGLAnnotationController_Private.h in Headers */,
 				078F5F0B22BC3DA300460948 /* MGLStyleAnnotation.h in Headers */,
+				1F40B9D722BC3150003DB389 /* MGLSymbolAnnotationController.h in Headers */,
 				07CBD7EC22B8570400732884 /* annotations_framework_extension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,7 +426,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F40B9D422BC3136003DB389 /* MGLCircleAnnotationController.m in Sources */,
+				07CBD7F522B9987200732884 /* SaySomething.m in Sources */,
+				1F40B9E022BC31D6003DB389 /* MGLPolygonAnnotationController.m in Sources */,
+				1F40B9D022BC3110003DB389 /* MGLAnnotationController.m in Sources */,
+				1F40B9D822BC3150003DB389 /* MGLSymbolAnnotationController.m in Sources */,
 				078F5F0C22BC3DA300460948 /* MGLStyleAnnotation.m in Sources */,
+				1F40B9DC22BC3164003DB389 /* MGLLineAnnotationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
