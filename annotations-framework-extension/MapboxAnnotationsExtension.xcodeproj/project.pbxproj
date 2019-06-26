@@ -37,7 +37,10 @@
 		1FDAB57822BD801E003D6D34 /* MGLPolygonAnnotationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F40B9DD22BC31D6003DB389 /* MGLPolygonAnnotationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FDAB58822BD8DD7003D6D34 /* MapboxAnnotationsExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CBD7E722B8570400732884 /* MapboxAnnotationsExtension.framework */; };
 		1FDAB58922BD8DD7003D6D34 /* MapboxAnnotationsExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07CBD7E722B8570400732884 /* MapboxAnnotationsExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FDAB5C622C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB5C522C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.m */; };
+		1FDAB5C822C3FAEB003D6D34 /* MapboxAnnotationsExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CBD7E722B8570400732884 /* MapboxAnnotationsExtension.framework */; };
 		372699A6A03B0EEA9FE92DD9 /* Pods_annotationapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38AF688BC1F6AD1BA4503AF /* Pods_annotationapp.framework */; };
+		430C3D7780F7E018C4BBB19B /* Pods_MapboxAnnotationsExtension_MapboxAnnotationsExtensionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE7362A463C13625B971F4A /* Pods_MapboxAnnotationsExtension_MapboxAnnotationsExtensionTests.framework */; };
 		FE0108F53C83318ABD7912F0 /* Pods_MapboxAnnotationsExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24551C2C5ABB2FCB0DD02E3 /* Pods_MapboxAnnotationsExtension.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,13 @@
 			remoteInfo = annotationapp;
 		};
 		1FDAB58A22BD8DD7003D6D34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07CBD7DE22B8570400732884 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07CBD7E622B8570400732884;
+			remoteInfo = MapboxAnnotationsExtension;
+		};
+		1FDAB5C922C3FAEB003D6D34 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07CBD7DE22B8570400732884 /* Project object */;
 			proxyType = 1;
@@ -108,12 +118,20 @@
 		1FDAB56D22BD5065003D6D34 /* MGLPolygonStyleAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLPolygonStyleAnnotation.m; sourceTree = "<group>"; };
 		1FDAB57022BD5083003D6D34 /* MGLSymbolStyleAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLSymbolStyleAnnotation.h; sourceTree = "<group>"; };
 		1FDAB57122BD5083003D6D34 /* MGLSymbolStyleAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLSymbolStyleAnnotation.m; sourceTree = "<group>"; };
+		1FDAB5C322C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapboxAnnotationsExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FDAB5C522C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapboxAnnotationsExtensionTests.m; sourceTree = "<group>"; };
+		1FDAB5C722C3FAEB003D6D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26E77B23BBD30F6F235857DC /* Pods-annotations-framework-extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-annotations-framework-extension.debug.xcconfig"; path = "Target Support Files/Pods-annotations-framework-extension/Pods-annotations-framework-extension.debug.xcconfig"; sourceTree = "<group>"; };
 		33C2AF676D4891A0F96B75C1 /* Pods-MapboxAnnotationsExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxAnnotationsExtension.debug.xcconfig"; path = "Target Support Files/Pods-MapboxAnnotationsExtension/Pods-MapboxAnnotationsExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		4B9A8FB4B4144BFC0B170BB4 /* Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.release.xcconfig"; path = "Target Support Files/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.release.xcconfig"; sourceTree = "<group>"; };
 		8B53066538961005A56AE6BE /* Pods-annotations-framework-extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-annotations-framework-extension.release.xcconfig"; path = "Target Support Files/Pods-annotations-framework-extension/Pods-annotations-framework-extension.release.xcconfig"; sourceTree = "<group>"; };
 		A0FD9872645FB713D831D139 /* Pods-MapboxAnnotationsExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxAnnotationsExtension.release.xcconfig"; path = "Target Support Files/Pods-MapboxAnnotationsExtension/Pods-MapboxAnnotationsExtension.release.xcconfig"; sourceTree = "<group>"; };
+		CAE7362A463C13625B971F4A /* Pods_MapboxAnnotationsExtension_MapboxAnnotationsExtensionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapboxAnnotationsExtension_MapboxAnnotationsExtensionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA88D7EBEEE37718EFECCFAD /* Pods-MapboxAnnotationsExtensionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxAnnotationsExtensionTests.debug.xcconfig"; path = "Target Support Files/Pods-MapboxAnnotationsExtensionTests/Pods-MapboxAnnotationsExtensionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF334744709F801E4EE94EAE /* Pods-annotationapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-annotationapp.release.xcconfig"; path = "Target Support Files/Pods-annotationapp/Pods-annotationapp.release.xcconfig"; sourceTree = "<group>"; };
 		E24551C2C5ABB2FCB0DD02E3 /* Pods_MapboxAnnotationsExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapboxAnnotationsExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7EA0C455F327E8362556217 /* Pods-MapboxAnnotationsExtensionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxAnnotationsExtensionTests.release.xcconfig"; path = "Target Support Files/Pods-MapboxAnnotationsExtensionTests/Pods-MapboxAnnotationsExtensionTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC5B4BE389BE2B0BE4F56589 /* Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.debug.xcconfig"; path = "Target Support Files/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F38AF688BC1F6AD1BA4503AF /* Pods_annotationapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_annotationapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -142,6 +160,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1FDAB5C022C3FAEB003D6D34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FDAB5C822C3FAEB003D6D34 /* MapboxAnnotationsExtension.framework in Frameworks */,
+				430C3D7780F7E018C4BBB19B /* Pods_MapboxAnnotationsExtension_MapboxAnnotationsExtensionTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -151,6 +178,7 @@
 				07CBD7E922B8570400732884 /* MapboxAnnotationsExtension */,
 				1F40B9AA22BC1B03003DB389 /* annotationapp */,
 				1F40B9BF22BC1B05003DB389 /* annotationappTests */,
+				1FDAB5C422C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests */,
 				07CBD7E822B8570400732884 /* Products */,
 				EB091C6C074C35269E8976B8 /* Pods */,
 				692128449CDA8E992901FCCE /* Frameworks */,
@@ -163,6 +191,7 @@
 				07CBD7E722B8570400732884 /* MapboxAnnotationsExtension.framework */,
 				1F40B9A922BC1B03003DB389 /* annotationapp.app */,
 				1F40B9BC22BC1B05003DB389 /* annotationappTests.xctest */,
+				1FDAB5C322C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,11 +264,21 @@
 			path = Annotations;
 			sourceTree = "<group>";
 		};
+		1FDAB5C422C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB5C522C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.m */,
+				1FDAB5C722C3FAEB003D6D34 /* Info.plist */,
+			);
+			path = MapboxAnnotationsExtensionTests;
+			sourceTree = "<group>";
+		};
 		692128449CDA8E992901FCCE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				F38AF688BC1F6AD1BA4503AF /* Pods_annotationapp.framework */,
 				E24551C2C5ABB2FCB0DD02E3 /* Pods_MapboxAnnotationsExtension.framework */,
+				CAE7362A463C13625B971F4A /* Pods_MapboxAnnotationsExtension_MapboxAnnotationsExtensionTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -253,6 +292,10 @@
 				8B53066538961005A56AE6BE /* Pods-annotations-framework-extension.release.xcconfig */,
 				33C2AF676D4891A0F96B75C1 /* Pods-MapboxAnnotationsExtension.debug.xcconfig */,
 				A0FD9872645FB713D831D139 /* Pods-MapboxAnnotationsExtension.release.xcconfig */,
+				DA88D7EBEEE37718EFECCFAD /* Pods-MapboxAnnotationsExtensionTests.debug.xcconfig */,
+				E7EA0C455F327E8362556217 /* Pods-MapboxAnnotationsExtensionTests.release.xcconfig */,
+				EC5B4BE389BE2B0BE4F56589 /* Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.debug.xcconfig */,
+				4B9A8FB4B4144BFC0B170BB4 /* Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -341,6 +384,26 @@
 			productReference = 1F40B9BC22BC1B05003DB389 /* annotationappTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		1FDAB5C222C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FDAB5CD22C3FAEB003D6D34 /* Build configuration list for PBXNativeTarget "MapboxAnnotationsExtensionTests" */;
+			buildPhases = (
+				4F7E3A1792B1FC59FC48A777 /* [CP] Check Pods Manifest.lock */,
+				1FDAB5BF22C3FAEB003D6D34 /* Sources */,
+				1FDAB5C022C3FAEB003D6D34 /* Frameworks */,
+				1FDAB5C122C3FAEB003D6D34 /* Resources */,
+				777E5434467A9CA7B9086AF6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FDAB5CA22C3FAEB003D6D34 /* PBXTargetDependency */,
+			);
+			name = MapboxAnnotationsExtensionTests;
+			productName = MapboxAnnotationsExtensionTests;
+			productReference = 1FDAB5C322C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -361,6 +424,9 @@
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = 1F40B9A822BC1B03003DB389;
 					};
+					1FDAB5C222C3FAEB003D6D34 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 07CBD7E122B8570400732884 /* Build configuration list for PBXProject "MapboxAnnotationsExtension" */;
@@ -379,6 +445,7 @@
 				07CBD7E622B8570400732884 /* MapboxAnnotationsExtension */,
 				1F40B9A822BC1B03003DB389 /* annotationapp */,
 				1F40B9BB22BC1B05003DB389 /* annotationappTests */,
+				1FDAB5C222C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -402,6 +469,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1F40B9BA22BC1B05003DB389 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FDAB5C122C3FAEB003D6D34 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -450,6 +524,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F7E3A1792B1FC59FC48A777 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		777E5434467A9CA7B9086AF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97DEF6868EBC6E772F04E9AC /* [CP] Check Pods Manifest.lock */ = {
@@ -528,6 +641,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1FDAB5BF22C3FAEB003D6D34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FDAB5C622C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -540,6 +661,11 @@
 			isa = PBXTargetDependency;
 			target = 07CBD7E622B8570400732884 /* MapboxAnnotationsExtension */;
 			targetProxy = 1FDAB58A22BD8DD7003D6D34 /* PBXContainerItemProxy */;
+		};
+		1FDAB5CA22C3FAEB003D6D34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07CBD7E622B8570400732884 /* MapboxAnnotationsExtension */;
+			targetProxy = 1FDAB5C922C3FAEB003D6D34 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -825,6 +951,44 @@
 			};
 			name = Release;
 		};
+		1FDAB5CB22C3FAEB003D6D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC5B4BE389BE2B0BE4F56589 /* Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GJZR2MEM28;
+				INFOPLIST_FILE = MapboxAnnotationsExtensionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.MapboxAnnotationsExtensionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FDAB5CC22C3FAEB003D6D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B9A8FB4B4144BFC0B170BB4 /* Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GJZR2MEM28;
+				INFOPLIST_FILE = MapboxAnnotationsExtensionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mapbox.MapboxAnnotationsExtensionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -860,6 +1024,15 @@
 			buildConfigurations = (
 				1F40B9C522BC1B05003DB389 /* Debug */,
 				1F40B9C622BC1B05003DB389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FDAB5CD22C3FAEB003D6D34 /* Build configuration list for PBXNativeTarget "MapboxAnnotationsExtensionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FDAB5CB22C3FAEB003D6D34 /* Debug */,
+				1FDAB5CC22C3FAEB003D6D34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

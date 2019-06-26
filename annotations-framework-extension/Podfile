@@ -8,6 +8,11 @@ end
 
 target 'MapboxAnnotationsExtension' do
   shared_pods
+
+  target 'MapboxAnnotationsExtensionTests' do
+
+  end
+
 end
 
 target 'annotationapp' do

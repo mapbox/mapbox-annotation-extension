@@ -20,6 +20,20 @@
                ReferencedContainer = "container:MapboxAnnotationsExtension.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1FDAB5C222C3FAEB003D6D34"
+               BuildableName = "MapboxAnnotationsExtensionTests.xctest"
+               BlueprintName = "MapboxAnnotationsExtensionTests"
+               ReferencedContainer = "container:MapboxAnnotationsExtension.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,7 +42,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1FDAB5C222C3FAEB003D6D34"
+               BuildableName = "MapboxAnnotationsExtensionTests.xctest"
+               BlueprintName = "MapboxAnnotationsExtensionTests"
+               ReferencedContainer = "container:MapboxAnnotationsExtension.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "07CBD7E622B8570400732884"
+            BuildableName = "MapboxAnnotationsExtension.framework"
+            BlueprintName = "MapboxAnnotationsExtension"
+            ReferencedContainer = "container:MapboxAnnotationsExtension.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
