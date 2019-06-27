@@ -42,6 +42,10 @@
 		1FDAB5D222C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDAB5D022C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.h */; };
 		1FDAB5D322C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB5D122C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.m */; };
 		1FDAB5D522C42564003D6D34 /* UIColorMGLAnnotationsExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB5D422C42564003D6D34 /* UIColorMGLAnnotationsExtension.m */; };
+		1FDAB5D822C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDAB5D622C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.h */; };
+		1FDAB5D922C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB5D722C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.m */; };
+		1FDAB5DD22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDAB5DB22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.h */; };
+		1FDAB5DE22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB5DC22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.m */; };
 		372699A6A03B0EEA9FE92DD9 /* Pods_annotationapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38AF688BC1F6AD1BA4503AF /* Pods_annotationapp.framework */; };
 		430C3D7780F7E018C4BBB19B /* Pods_MapboxAnnotationsExtension_MapboxAnnotationsExtensionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE7362A463C13625B971F4A /* Pods_MapboxAnnotationsExtension_MapboxAnnotationsExtensionTests.framework */; };
 		FE0108F53C83318ABD7912F0 /* Pods_MapboxAnnotationsExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24551C2C5ABB2FCB0DD02E3 /* Pods_MapboxAnnotationsExtension.framework */; };
@@ -127,6 +131,10 @@
 		1FDAB5D022C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+MGLAnnotationsExtension.h"; sourceTree = "<group>"; };
 		1FDAB5D122C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MGLAnnotationsExtension.m"; sourceTree = "<group>"; };
 		1FDAB5D422C42564003D6D34 /* UIColorMGLAnnotationsExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIColorMGLAnnotationsExtension.m; sourceTree = "<group>"; };
+		1FDAB5D622C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGLEnums+MGLAnnotationsExtension.h"; sourceTree = "<group>"; };
+		1FDAB5D722C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MGLEnums+MGLAnnotationsExtension.m"; sourceTree = "<group>"; };
+		1FDAB5DB22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGLStructs+MGLAnnotationsExtension.h"; sourceTree = "<group>"; };
+		1FDAB5DC22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MGLStructs+MGLAnnotationsExtension.m"; sourceTree = "<group>"; };
 		26E77B23BBD30F6F235857DC /* Pods-annotations-framework-extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-annotations-framework-extension.debug.xcconfig"; path = "Target Support Files/Pods-annotations-framework-extension/Pods-annotations-framework-extension.debug.xcconfig"; sourceTree = "<group>"; };
 		33C2AF676D4891A0F96B75C1 /* Pods-MapboxAnnotationsExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxAnnotationsExtension.debug.xcconfig"; path = "Target Support Files/Pods-MapboxAnnotationsExtension/Pods-MapboxAnnotationsExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		4B9A8FB4B4144BFC0B170BB4 /* Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.release.xcconfig"; path = "Target Support Files/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -286,6 +294,10 @@
 			children = (
 				1FDAB5D022C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.h */,
 				1FDAB5D122C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.m */,
+				1FDAB5D622C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.h */,
+				1FDAB5D722C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.m */,
+				1FDAB5DB22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.h */,
+				1FDAB5DC22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -328,6 +340,7 @@
 				1FDAB56E22BD5065003D6D34 /* MGLPolygonStyleAnnotation.h in Headers */,
 				1F40B9E322BC523C003DB389 /* MGLAnnotationController_Private.h in Headers */,
 				078F5F0B22BC3DA300460948 /* MGLStyleAnnotation.h in Headers */,
+				1FDAB5DD22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.h in Headers */,
 				1FDAB56A22BD5050003D6D34 /* MGLLineStyleAnnotation.h in Headers */,
 				1F40B9D722BC3150003DB389 /* MGLSymbolAnnotationController.h in Headers */,
 				1FDAB57522BD7FCE003D6D34 /* MGLAnnotationController.h in Headers */,
@@ -336,6 +349,7 @@
 				1FDAB56622BD5039003D6D34 /* MGLCircleStyleAnnotation.h in Headers */,
 				1FDAB5D222C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.h in Headers */,
 				1FDAB57822BD801E003D6D34 /* MGLPolygonAnnotationController.h in Headers */,
+				1FDAB5D822C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.h in Headers */,
 				1FDAB57222BD5083003D6D34 /* MGLSymbolStyleAnnotation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,10 +650,12 @@
 				1F40B9E022BC31D6003DB389 /* MGLPolygonAnnotationController.m in Sources */,
 				1F40B9D022BC3110003DB389 /* MGLAnnotationController.m in Sources */,
 				1F40B9D822BC3150003DB389 /* MGLSymbolAnnotationController.m in Sources */,
+				1FDAB5D922C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.m in Sources */,
 				078F5F0C22BC3DA300460948 /* MGLStyleAnnotation.m in Sources */,
 				1F40B9DC22BC3164003DB389 /* MGLLineAnnotationController.m in Sources */,
 				1FDAB56722BD5039003D6D34 /* MGLCircleStyleAnnotation.m in Sources */,
 				1FDAB56B22BD5050003D6D34 /* MGLLineStyleAnnotation.m in Sources */,
+				1FDAB5DE22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
