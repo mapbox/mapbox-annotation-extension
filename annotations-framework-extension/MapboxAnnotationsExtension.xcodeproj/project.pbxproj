@@ -46,6 +46,7 @@
 		1FDAB5D922C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB5D722C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.m */; };
 		1FDAB5DD22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDAB5DB22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.h */; };
 		1FDAB5DE22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB5DC22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.m */; };
+		1FDAB5E122C55EB0003D6D34 /* MGLCircleStyleAnnotation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDAB5DF22C55EB0003D6D34 /* MGLCircleStyleAnnotation_Private.h */; };
 		372699A6A03B0EEA9FE92DD9 /* Pods_annotationapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38AF688BC1F6AD1BA4503AF /* Pods_annotationapp.framework */; };
 		430C3D7780F7E018C4BBB19B /* Pods_MapboxAnnotationsExtension_MapboxAnnotationsExtensionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE7362A463C13625B971F4A /* Pods_MapboxAnnotationsExtension_MapboxAnnotationsExtensionTests.framework */; };
 		FE0108F53C83318ABD7912F0 /* Pods_MapboxAnnotationsExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24551C2C5ABB2FCB0DD02E3 /* Pods_MapboxAnnotationsExtension.framework */; };
@@ -135,6 +136,7 @@
 		1FDAB5D722C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MGLEnums+MGLAnnotationsExtension.m"; sourceTree = "<group>"; };
 		1FDAB5DB22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGLStructs+MGLAnnotationsExtension.h"; sourceTree = "<group>"; };
 		1FDAB5DC22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MGLStructs+MGLAnnotationsExtension.m"; sourceTree = "<group>"; };
+		1FDAB5DF22C55EB0003D6D34 /* MGLCircleStyleAnnotation_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLCircleStyleAnnotation_Private.h; sourceTree = "<group>"; };
 		26E77B23BBD30F6F235857DC /* Pods-annotations-framework-extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-annotations-framework-extension.debug.xcconfig"; path = "Target Support Files/Pods-annotations-framework-extension/Pods-annotations-framework-extension.debug.xcconfig"; sourceTree = "<group>"; };
 		33C2AF676D4891A0F96B75C1 /* Pods-MapboxAnnotationsExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxAnnotationsExtension.debug.xcconfig"; path = "Target Support Files/Pods-MapboxAnnotationsExtension/Pods-MapboxAnnotationsExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		4B9A8FB4B4144BFC0B170BB4 /* Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.release.xcconfig"; path = "Target Support Files/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests/Pods-MapboxAnnotationsExtension-MapboxAnnotationsExtensionTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				078F5F0922BC3DA300460948 /* MGLStyleAnnotation.h */,
 				078F5F0A22BC3DA300460948 /* MGLStyleAnnotation.m */,
 				1FDAB56422BD5039003D6D34 /* MGLCircleStyleAnnotation.h */,
+				1FDAB5DF22C55EB0003D6D34 /* MGLCircleStyleAnnotation_Private.h */,
 				1FDAB56522BD5039003D6D34 /* MGLCircleStyleAnnotation.m */,
 				1FDAB56822BD5050003D6D34 /* MGLLineStyleAnnotation.h */,
 				1FDAB56922BD5050003D6D34 /* MGLLineStyleAnnotation.m */,
@@ -336,6 +339,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FDAB5E122C55EB0003D6D34 /* MGLCircleStyleAnnotation_Private.h in Headers */,
 				1FDAB57622BD800A003D6D34 /* MGLCircleAnnotationController.h in Headers */,
 				1FDAB56E22BD5065003D6D34 /* MGLPolygonStyleAnnotation.h in Headers */,
 				1F40B9E322BC523C003DB389 /* MGLAnnotationController_Private.h in Headers */,

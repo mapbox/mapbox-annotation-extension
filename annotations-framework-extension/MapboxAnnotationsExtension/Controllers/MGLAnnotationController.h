@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MGLAnnotationController : NSObject
 
 @property (nonatomic, assign) BOOL annotationsInteractionEnabled;
+@property (nonatomic, strong) MGLMapView *mapView;
 
 - (instancetype)initWithMapView:(MGLMapView *)mapView;
 - (instancetype)initWithMapView:(MGLMapView *)mapView belowLayerIdentifier:(NSString *)layerIdentifier;

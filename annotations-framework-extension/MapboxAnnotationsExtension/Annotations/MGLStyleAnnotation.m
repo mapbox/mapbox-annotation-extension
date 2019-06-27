@@ -1,17 +1,16 @@
 #import "MGLStyleAnnotation.h"
 
-@interface MGLStyleAnnotation ()
-
-@property (nonatomic) NSString *UUID;
-
-- (NSDictionary*)geoJSONDictionary;
-
-@end
-
 @implementation MGLStyleAnnotation
 
-- (instancetype)initWithFeature:(id<MGLFeature>)feature {
+- (instancetype)init {
     if (self = [super init]) {
+        self.identifier = [[NSUUID UUID] UUIDString];
+    }
+    return self;
+}
+
+- (instancetype)initWithFeature:(id<MGLFeature>)feature {
+    if (self = [self init]) {
 
     }
 
@@ -19,7 +18,7 @@
 }
 
 - (instancetype)initWithGeoJSON:(NSData *)data {
-    if (self = [super init]) {
+    if (self = [self init]) {
 
     }
 
