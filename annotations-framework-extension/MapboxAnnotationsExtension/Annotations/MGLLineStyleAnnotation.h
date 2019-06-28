@@ -5,7 +5,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MGLLineStyleAnnotation : MGLStyleAnnotation
 
-@property (nonatomic, assign) CGFloat lineJoin;
+@property (nonatomic, assign) MGLLineJoin lineJoin;
 @property (nonatomic, assign) CGFloat lineBlur;
 @property (nonatomic, strong) UIColor *lineColor;
 @property (nonatomic, assign) CGFloat lineGapWidth;
