@@ -5,9 +5,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MGLSymbolStyleAnnotation : MGLStyleAnnotation
 
-@property (nonatomic, assign) CGFloat iconAnchor;
+@property (nonatomic, assign) MGLIconAnchor iconAnchor;
 @property (nonatomic, strong) NSString *iconImageName;
-@property (nonatomic, assign) CGFloat iconOffset;
+@property (nonatomic, assign) CGVector iconOffset;
 @property (nonatomic, assign) CGFloat iconRotation;
 @property (nonatomic, assign) CGFloat iconScale;
 @property (nonatomic, strong) UIColor *iconColor;
@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, assign) MGLTextAnchor textAnchor;
+@property (nonatomic, assign) CGVector textTranslation;
 @property (nonatomic, strong) NSArray<NSString *> *fontNames;
 @property (nonatomic, assign) CGFloat textFontSize;
 @property (nonatomic, assign) MGLTextJustification textJustification;

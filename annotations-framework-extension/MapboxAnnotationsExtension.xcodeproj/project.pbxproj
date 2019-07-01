@@ -24,6 +24,7 @@
 		1F40B9E022BC31D6003DB389 /* MGLPolygonAnnotationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9DE22BC31D6003DB389 /* MGLPolygonAnnotationController.m */; };
 		1F40B9E322BC523C003DB389 /* MGLAnnotationController_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F40B9E122BC523C003DB389 /* MGLAnnotationController_Private.h */; };
 		1FD771D022C7D17D00B626DC /* MGLLineStyleAnnotation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD771CE22C7D17D00B626DC /* MGLLineStyleAnnotation_Private.h */; };
+		1FD771D422C9262D00B626DC /* MGLSymbolStyleAnnotation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD771D222C9262D00B626DC /* MGLSymbolStyleAnnotation_Private.h */; };
 		1FDAB56622BD5039003D6D34 /* MGLCircleStyleAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDAB56422BD5039003D6D34 /* MGLCircleStyleAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FDAB56722BD5039003D6D34 /* MGLCircleStyleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB56522BD5039003D6D34 /* MGLCircleStyleAnnotation.m */; };
 		1FDAB56A22BD5050003D6D34 /* MGLLineStyleAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDAB56822BD5050003D6D34 /* MGLLineStyleAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -121,6 +122,7 @@
 		1F40B9DE22BC31D6003DB389 /* MGLPolygonAnnotationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLPolygonAnnotationController.m; sourceTree = "<group>"; };
 		1F40B9E122BC523C003DB389 /* MGLAnnotationController_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLAnnotationController_Private.h; sourceTree = "<group>"; };
 		1FD771CE22C7D17D00B626DC /* MGLLineStyleAnnotation_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLLineStyleAnnotation_Private.h; sourceTree = "<group>"; };
+		1FD771D222C9262D00B626DC /* MGLSymbolStyleAnnotation_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLSymbolStyleAnnotation_Private.h; sourceTree = "<group>"; };
 		1FDAB56422BD5039003D6D34 /* MGLCircleStyleAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLCircleStyleAnnotation.h; sourceTree = "<group>"; };
 		1FDAB56522BD5039003D6D34 /* MGLCircleStyleAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLCircleStyleAnnotation.m; sourceTree = "<group>"; };
 		1FDAB56822BD5050003D6D34 /* MGLLineStyleAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLLineStyleAnnotation.h; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				1FDAB56C22BD5065003D6D34 /* MGLPolygonStyleAnnotation.h */,
 				1FDAB56D22BD5065003D6D34 /* MGLPolygonStyleAnnotation.m */,
 				1FDAB57022BD5083003D6D34 /* MGLSymbolStyleAnnotation.h */,
+				1FD771D222C9262D00B626DC /* MGLSymbolStyleAnnotation_Private.h */,
 				1FDAB57122BD5083003D6D34 /* MGLSymbolStyleAnnotation.m */,
 			);
 			path = Annotations;
@@ -349,6 +352,7 @@
 				1FDAB57622BD800A003D6D34 /* MGLCircleAnnotationController.h in Headers */,
 				1FDAB56E22BD5065003D6D34 /* MGLPolygonStyleAnnotation.h in Headers */,
 				1F40B9E322BC523C003DB389 /* MGLAnnotationController_Private.h in Headers */,
+				1FD771D422C9262D00B626DC /* MGLSymbolStyleAnnotation_Private.h in Headers */,
 				078F5F0B22BC3DA300460948 /* MGLStyleAnnotation.h in Headers */,
 				1FDAB5DD22C4411B003D6D34 /* MGLStructs+MGLAnnotationsExtension.h in Headers */,
 				1FDAB56A22BD5050003D6D34 /* MGLLineStyleAnnotation.h in Headers */,

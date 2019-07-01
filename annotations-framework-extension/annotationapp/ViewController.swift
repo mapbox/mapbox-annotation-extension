@@ -51,6 +51,32 @@ extension ViewController : MGLMapViewDelegate {
         lineAnnotation1.lineWidth = 5
         lineAnnotationController.add([lineAnnotation1])
         
+        let attraction = UIImage(named: "attraction")
+        
+        if let styleImage = attraction {
+            self.mapView.style?.setImage(styleImage, forName: "attraction")
+        }
+
+        let symbolAnnotationController = MGLSymbolAnnotationController(mapView: self.mapView)
+        
+        let symbolAnnotation1 = MGLSymbolStyleAnnotation(CLLocationCoordinate2DMake(59.29, 18.06));
+        symbolAnnotation1.iconImageName = "attraction"
+        symbolAnnotation1.iconScale = 0.5
+        
+        symbolAnnotation1.iconHaloColor = UIColor.white.withAlphaComponent(0.5)
+        symbolAnnotation1.iconHaloWidth = 1
+        
+        symbolAnnotation1.text = "Come Here!"
+        symbolAnnotation1.textColor = .blue
+        symbolAnnotation1.textFontSize = 16
+        symbolAnnotation1.textHaloColor = symbolAnnotation1.iconHaloColor
+        symbolAnnotation1.textHaloWidth = symbolAnnotation1.iconHaloWidth
+        symbolAnnotation1.textJustification = .left
+        symbolAnnotation1.textAnchor = .left
+        
+        symbolAnnotationController.textTranslation = CGVector(dx: 10, dy: 0)
+        symbolAnnotationController.add(symbolAnnotation1)
+
     }
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {

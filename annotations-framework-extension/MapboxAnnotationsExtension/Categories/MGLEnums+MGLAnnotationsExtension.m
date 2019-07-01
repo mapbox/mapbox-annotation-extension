@@ -109,4 +109,193 @@
     return constantValues[lineTranslationAnchorString].MGLLineTranslationAnchorValue;
 }
 
+#pragma mark - Symbol layer enum transformation
+
++ (MGLIconPitchAlignment)iconPitchAlignmentFromNSString:(NSString *)iconPitchAlignmentString {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"map" : [NSValue valueWithMGLIconPitchAlignment:MGLIconPitchAlignmentMap],
+                                                            @"viewport" : [NSValue valueWithMGLIconPitchAlignment:MGLIconPitchAlignmentViewport],
+                                                            @"auto" : [NSValue valueWithMGLIconPitchAlignment:MGLIconPitchAlignmentAuto],
+                                                            };
+    return constantValues[iconPitchAlignmentString].MGLIconPitchAlignmentValue;
+}
+
++ (NSString *)stringFromMGLIconRotationAlignment:(MGLIconRotationAlignment)iconRotationAlignment {
+    NSDictionary<NSNumber *, NSString* > *constantValues = @{
+                                                             [NSNumber numberWithInteger:MGLIconRotationAlignmentMap] : @"map",
+                                                             [NSNumber numberWithInteger:MGLIconRotationAlignmentViewport] : @"viewport",
+                                                             [NSNumber numberWithInteger:MGLIconRotationAlignmentAuto] : @"auto",
+                                                             };
+    return constantValues[[NSNumber numberWithInteger:iconRotationAlignment]];
+}
+
++ (MGLIconRotationAlignment)iconRotationAlignmentFromNSString:(NSString *)iconRotationAlignment {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"map" : [NSValue valueWithMGLIconRotationAlignment:MGLIconRotationAlignmentMap],
+                                                            @"viewport" : [NSValue valueWithMGLIconRotationAlignment:MGLIconRotationAlignmentViewport],
+                                                            @"auto" : [NSValue valueWithMGLIconRotationAlignment:MGLIconRotationAlignmentAuto],
+                                                            };
+    return constantValues[iconRotationAlignment].MGLIconRotationAlignmentValue;
+}
+
++ (MGLIconTextFit)iconTextFitFromNSString:(NSString *)iconTextFit {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"both" : [NSValue valueWithMGLIconTextFit:MGLIconTextFitBoth],
+                                                            @"none" : [NSValue valueWithMGLIconTextFit:MGLIconTextFitNone],
+                                                            @"width" : [NSValue valueWithMGLIconTextFit:MGLIconTextFitWidth],
+                                                            @"height" : [NSValue valueWithMGLIconTextFit:MGLIconTextFitHeight],
+                                                            };
+    return constantValues[iconTextFit].MGLIconTextFitValue;
+}
+
++ (MGLSymbolPlacement)symbolPlacementFromNSString:(NSString *)symbolPlacement {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"point" : [NSValue valueWithMGLSymbolPlacement:MGLSymbolPlacementLine],
+                                                            @"line" : [NSValue valueWithMGLSymbolPlacement:MGLSymbolPlacementPoint],
+                                                            @"line-center" : [NSValue valueWithMGLSymbolPlacement:MGLSymbolPlacementLineCenter],
+                                                            };
+    return constantValues[symbolPlacement].MGLSymbolPlacementValue;
+}
+
++ (MGLSymbolZOrder)symbolZOrderFromNSString:(NSString *)symbolZOrder {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"auto" : [NSValue valueWithMGLSymbolZOrder:MGLSymbolZOrderAuto],
+                                                            @"source" : [NSValue valueWithMGLSymbolZOrder:MGLSymbolZOrderSource],
+                                                            @"viewport-y" : [NSValue valueWithMGLSymbolZOrder:MGLSymbolZOrderViewportY],
+                                                            };
+    return constantValues[symbolZOrder].MGLSymbolZOrderValue;
+}
+
++ (MGLTextPitchAlignment)textPitchAlignmentFromNSString:(NSString *)textPitchAlignment {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"map" : [NSValue valueWithMGLTextPitchAlignment:MGLTextPitchAlignmentMap],
+                                                            @"auto" : [NSValue valueWithMGLTextPitchAlignment:MGLTextPitchAlignmentAuto],
+                                                            @"viewport" : [NSValue valueWithMGLTextPitchAlignment:MGLTextPitchAlignmentViewport],
+                                                            };
+    return constantValues[textPitchAlignment].MGLTextPitchAlignmentValue;
+}
+
++ (MGLTextRotationAlignment)textRotationAlignmentFromNSString:(NSString *)textRotationAlignment {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"map" : [NSValue valueWithMGLTextRotationAlignment:MGLTextRotationAlignmentMap],
+                                                            @"auto" : [NSValue valueWithMGLTextRotationAlignment:MGLTextRotationAlignmentAuto],
+                                                            @"viewport" : [NSValue valueWithMGLTextRotationAlignment:MGLTextRotationAlignmentViewport],
+                                                            };
+    return constantValues[textRotationAlignment].MGLTextRotationAlignmentValue;
+}
+
++ (NSString *)stringFromMGLTextAnchor:(MGLTextAnchor)textAnchor {
+    NSDictionary<NSNumber *, NSString* > *constantValues = @{
+                                                             [NSNumber numberWithInteger:MGLTextAnchorTop] : @"top",
+                                                             [NSNumber numberWithInteger:MGLTextAnchorLeft] : @"left",
+                                                             [NSNumber numberWithInteger:MGLTextAnchorRight] : @"right",
+                                                             [NSNumber numberWithInteger:MGLTextAnchorBottom] : @"bottom",
+                                                             [NSNumber numberWithInteger:MGLTextAnchorCenter] : @"center",
+                                                             [NSNumber numberWithInteger:MGLTextAnchorTopLeft] : @"top-left",
+                                                             [NSNumber numberWithInteger:MGLTextAnchorTopRight] : @"top-right",
+                                                             [NSNumber numberWithInteger:MGLTextAnchorBottomLeft] : @"bottom-left",
+                                                             [NSNumber numberWithInteger:MGLTextAnchorBottomRight] : @"bottom-right",
+                                                             };
+    return constantValues[[NSNumber numberWithInteger:textAnchor]];
+}
+
++ (MGLTextAnchor)textAnchorFromNSString:(NSString *)textAnchor {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"top" : [NSValue valueWithMGLTextAnchor:MGLTextAnchorTop],
+                                                            @"left" : [NSValue valueWithMGLTextAnchor:MGLTextAnchorLeft],
+                                                            @"right" : [NSValue valueWithMGLTextAnchor:MGLTextAnchorRight],
+                                                            @"bottom" : [NSValue valueWithMGLTextAnchor:MGLTextAnchorBottom],
+                                                            @"center" : [NSValue valueWithMGLTextAnchor:MGLTextAnchorCenter],
+                                                            @"top-left" : [NSValue valueWithMGLTextAnchor:MGLTextAnchorTopLeft],
+                                                            @"top-right" : [NSValue valueWithMGLTextAnchor:MGLTextAnchorTopRight],
+                                                            @"bottom-left" : [NSValue valueWithMGLTextAnchor:MGLTextAnchorBottomLeft],
+                                                            @"bottom-right" : [NSValue valueWithMGLTextAnchor:MGLTextAnchorBottomRight],
+                                                            };
+    return constantValues[textAnchor].MGLTextAnchorValue;
+}
+
++ (MGLIconTranslationAnchor)iconTranslationAnchorFromNSString:(NSString *)iconTranslationAnchor {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"map" : [NSValue valueWithMGLIconTranslationAnchor:MGLIconTranslationAnchorMap],
+                                                            @"viewport" : [NSValue valueWithMGLIconTranslationAnchor:MGLIconTranslationAnchorViewport],
+                                                            };
+    return constantValues[iconTranslationAnchor].MGLIconTranslationAnchorValue;
+}
+
++ (MGLTextTranslationAnchor)textTranslationAnchorFromNSString:(NSString *)textTranslationAnchor {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"map" : [NSValue valueWithMGLTextTranslationAnchor:MGLTextTranslationAnchorMap],
+                                                            @"viewport" : [NSValue valueWithMGLTextTranslationAnchor:MGLTextTranslationAnchorViewport],
+                                                            };
+    return constantValues[textTranslationAnchor].MGLTextTranslationAnchorValue;
+}
+
++ (NSString *)stringFromMGLIconAnchor:(MGLIconAnchor)iconAnchor {
+    NSDictionary<NSNumber *, NSString* > *constantValues = @{
+                                                             [NSNumber numberWithInteger:MGLIconAnchorTop] : @"top",
+                                                             [NSNumber numberWithInteger:MGLIconAnchorLeft] : @"left",
+                                                             [NSNumber numberWithInteger:MGLIconAnchorRight] : @"right",
+                                                             [NSNumber numberWithInteger:MGLIconAnchorBottom] : @"bottom",
+                                                             [NSNumber numberWithInteger:MGLIconAnchorCenter] : @"center",
+                                                             [NSNumber numberWithInteger:MGLIconAnchorTopLeft] : @"top-left",
+                                                             [NSNumber numberWithInteger:MGLIconAnchorTopRight] : @"top-right",
+                                                             [NSNumber numberWithInteger:MGLIconAnchorBottomLeft] : @"bottom-left",
+                                                             [NSNumber numberWithInteger:MGLIconAnchorBottomRight] : @"bottom-right",
+                                                             };
+    return constantValues[[NSNumber numberWithInteger:iconAnchor]];
+}
+
++ (MGLIconAnchor)iconAnchorFromNSString:(NSString *)iconAnchor {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"top" : [NSValue valueWithMGLIconAnchor:MGLIconAnchorTop],
+                                                            @"left" : [NSValue valueWithMGLIconAnchor:MGLIconAnchorLeft],
+                                                            @"right" : [NSValue valueWithMGLIconAnchor:MGLIconAnchorRight],
+                                                            @"bottom" : [NSValue valueWithMGLIconAnchor:MGLIconAnchorBottom],
+                                                            @"center" : [NSValue valueWithMGLIconAnchor:MGLIconAnchorCenter],
+                                                            @"top-left" : [NSValue valueWithMGLIconAnchor:MGLIconAnchorTopLeft],
+                                                            @"top-right" : [NSValue valueWithMGLIconAnchor:MGLIconAnchorTopRight],
+                                                            @"bottom-left" : [NSValue valueWithMGLIconAnchor:MGLIconAnchorBottomLeft],
+                                                            @"bottom-right" : [NSValue valueWithMGLIconAnchor:MGLIconAnchorBottomRight],
+                                                            };
+    return constantValues[iconAnchor].MGLIconAnchorValue;
+}
+
++ (NSString *)stringFromMGLTextJustification:(MGLTextJustification)textJustification {
+    NSDictionary<NSNumber *, NSString* > *constantValues = @{
+                                                             [NSNumber numberWithInteger:MGLTextJustificationAuto] : @"auto",
+                                                             [NSNumber numberWithInteger:MGLTextJustificationLeft] : @"left",
+                                                             [NSNumber numberWithInteger:MGLTextJustificationRight] : @"right",
+                                                             [NSNumber numberWithInteger:MGLTextJustificationCenter] : @"center",
+                                                             };
+    return constantValues[[NSNumber numberWithInteger:textJustification]];
+}
+
++ (MGLTextJustification)textJustificationFromNSString:(NSString *)textJustification {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"center" : [NSValue valueWithMGLTextJustification:MGLTextJustificationCenter],
+                                                            @"left" : [NSValue valueWithMGLTextJustification:MGLTextJustificationLeft],
+                                                            @"right" : [NSValue valueWithMGLTextJustification:MGLTextJustificationRight],
+                                                            @"auto" : [NSValue valueWithMGLTextJustification:MGLTextJustificationAuto],
+                                                            };
+    return constantValues[textJustification].MGLTextJustificationValue;
+}
+
++ (NSString *)stringFromMGLTextTransform:(MGLTextTransform)textTransform {
+    NSDictionary<NSNumber *, NSString* > *constantValues = @{
+                                                             [NSNumber numberWithInteger:MGLTextTransformNone] : @"none",
+                                                             [NSNumber numberWithInteger:MGLTextTransformLowercase] : @"lowercase",
+                                                             [NSNumber numberWithInteger:MGLTextTransformUppercase] : @"uppercase",
+                                                             };
+    return constantValues[[NSNumber numberWithInteger:textTransform]];
+}
+
++ (MGLTextTransform)textTransformFromNSString:(NSString *)textTransform {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"none" : [NSValue valueWithMGLTextTransform:MGLTextTransformNone],
+                                                            @"uppercase" : [NSValue valueWithMGLTextTransform:MGLTextTransformUppercase],
+                                                            @"lowercase" : [NSValue valueWithMGLTextTransform:MGLTextTransformLowercase],
+                                                            };
+    return constantValues[textTransform].MGLTextTransformValue;
+}
+
 @end

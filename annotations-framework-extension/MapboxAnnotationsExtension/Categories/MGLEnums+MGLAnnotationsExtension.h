@@ -26,6 +26,39 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)stringFromMGLLineTranslationAnchor:(MGLLineTranslationAnchor)lineTranslationAnchor;
 + (MGLLineTranslationAnchor)lineTranslationAnchorFromNSString:(NSString *)lineTranslationAnchorString;
 
+#pragma mark - Symbol Style Layer enum properties
+
++ (MGLIconPitchAlignment)iconPitchAlignmentFromNSString:(NSString *)iconPitchAlignmentString;
+
++ (NSString *)stringFromMGLIconRotationAlignment:(MGLIconRotationAlignment)iconRotationAlignment;
++ (MGLIconRotationAlignment)iconRotationAlignmentFromNSString:(NSString *)iconRotationAlignment;
+
++ (MGLIconTextFit)iconTextFitFromNSString:(NSString *)iconTextFit;
+
++ (MGLSymbolPlacement)symbolPlacementFromNSString:(NSString *)symbolPlacement;
+
++ (MGLSymbolZOrder)symbolZOrderFromNSString:(NSString *)symbolZOrder;
+
++ (MGLTextPitchAlignment)textPitchAlignmentFromNSString:(NSString *)textPitchAlignment;
+
++ (MGLTextRotationAlignment)textRotationAlignmentFromNSString:(NSString *)textRotationAlignment;
+
++ (NSString *)stringFromMGLTextAnchor:(MGLTextAnchor)textAnchor;
++ (MGLTextAnchor)textAnchorFromNSString:(NSString *)textAnchor;
+
++ (MGLIconTranslationAnchor)iconTranslationAnchorFromNSString:(NSString *)iconTranslationAnchor;
+
++ (MGLTextTranslationAnchor)textTranslationAnchorFromNSString:(NSString *)textTranslationAnchor;
+
++ (NSString *)stringFromMGLIconAnchor:(MGLIconAnchor)iconAnchor;
++ (MGLIconAnchor)iconAnchorFromNSString:(NSString *)iconAnchor;
+
++ (NSString *)stringFromMGLTextJustification:(MGLTextJustification)textJustification;
++ (MGLTextJustification)textJustificationFromNSString:(NSString *)textJustification;
+
++ (NSString *)stringFromMGLTextTransform:(MGLTextTransform)textTransform;
++ (MGLTextTransform)textTransformFromNSString:(NSString *)textTransform;
+
 
 @end
 
