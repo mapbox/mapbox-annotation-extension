@@ -131,11 +131,4 @@ NSString *const MGLPropertyCircleStrokeOpacity = @"circle-stroke-opacity";
     return self.pointFeature;
 }
 
-- (NSDictionary<NSString *, id> *)geoJSONDictionary {
-    NSMutableDictionary *geoJSON = [NSMutableDictionary dictionaryWithDictionary:self.feature.geoJSONDictionary];
-    [geoJSON setObject:self.attributes forKey:@"properties"];
-    
-    return geoJSON;
-}
-
 @end

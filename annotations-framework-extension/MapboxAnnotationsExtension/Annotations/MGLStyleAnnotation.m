@@ -65,9 +65,10 @@ NSString *const MGLPropertyAnnotationTooltip = @"annotation-tooltip";
     return self.attributes[MGLPropertyAnnotationSubtitle];
 }
 
-- (NSDictionary *)geoJSONDictionary {
-    return [NSDictionary dictionary];
+- (NSDictionary<NSString *, id> *)geoJSONDictionary {
+    NSMutableDictionary *geoJSON = [NSMutableDictionary dictionaryWithDictionary:self.feature.geoJSONDictionary];
+    [geoJSON setObject:self.attributes forKey:@"properties"];
+    return geoJSON;
 }
-
 
 @end

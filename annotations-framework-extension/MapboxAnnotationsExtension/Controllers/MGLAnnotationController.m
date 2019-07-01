@@ -4,12 +4,14 @@
 @interface MGLAnnotationController ()<UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary<NSString *, MGLStyleAnnotation *> *annotations;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NSNumber *> *enabledPaintProperties;
 @property (nonatomic, strong) MGLShapeSource *source;
 @property (nonatomic, strong) MGLStyleLayer *layer;
 @property (nonatomic) UITapGestureRecognizer *singleTapGestureRecognizer;
 @property (nonatomic) id<MGLFeature> selectedFeature;
 @property (nonatomic, assign) BOOL interactionEnabled;
 
+- (void)initializeLayer;
 - (void)enablePaintProperties:(MGLStyleAnnotation *)styleAnnotation;
 - (void)setPaintProperties;
 
@@ -19,20 +21,38 @@
 
 - (instancetype)initWithMapView:(MGLMapView *)mapView {
     if (self = [super init]) {
-        self.mapView = mapView;
-        NSString *uuid = [[NSUUID UUID] UUIDString];
-        
-        NSString *sourceIdentifier = [NSString stringWithFormat:@"annotations-extension-source-%@", uuid];
-        NSString *geoJSON = @"{\"type\": \"FeatureCollection\",\"features\": []}";
-        NSData *data = [geoJSON dataUsingEncoding:NSUTF8StringEncoding];
-        MGLShape *shape = [MGLShape shapeWithData:data encoding:NSUTF8StringEncoding error:NULL];
-        self.source = [[MGLShapeSource alloc] initWithIdentifier:sourceIdentifier shape:shape options:nil];
-        [self.mapView.style addSource:self.source];
-        self.annotations = [NSMutableDictionary dictionary];
-        self.annotationsInteractionEnabled = YES;
+        [self commonInit:mapView];
+        [self initializeLayer];
+        [self.mapView.style addLayer:self.layer];
     }
     
     return self;
+}
+
+- (instancetype)initWithMapView:(MGLMapView *)mapView belowLayerIdentifier:(nonnull NSString *)layerIdentifier {
+    if (self = [super init]) {
+        [self commonInit:mapView];
+        [self initializeLayer];
+        MGLStyleLayer *topLayer = [self.mapView.style layerWithIdentifier:layerIdentifier];
+        [self.mapView.style insertLayer:self.layer belowLayer:topLayer];
+    }
+    
+    return self;
+}
+
+- (void)commonInit:(MGLMapView *)mapView {
+    self.mapView = mapView;
+    NSString *uuid = [[NSUUID UUID] UUIDString];
+    
+    NSString *sourceIdentifier = [NSString stringWithFormat:@"annotations-extension-source-%@", uuid];
+    NSString *geoJSON = @"{\"type\": \"FeatureCollection\",\"features\": []}";
+    NSData *data = [geoJSON dataUsingEncoding:NSUTF8StringEncoding];
+    MGLShape *shape = [MGLShape shapeWithData:data encoding:NSUTF8StringEncoding error:NULL];
+    self.source = [[MGLShapeSource alloc] initWithIdentifier:sourceIdentifier shape:shape options:nil];
+    [self.mapView.style addSource:self.source];
+    self.annotations = [NSMutableDictionary dictionary];
+    self.enabledPaintProperties = [NSMutableDictionary dictionary];
+    self.annotationsInteractionEnabled = YES;
 }
 
 - (void)setAnnotationsInteractionEnabled:(BOOL)annotationsInteractionEnabled {
@@ -62,10 +82,8 @@
     return _interactionEnabled;
 }
 
-- (instancetype)initWithMapView:(MGLMapView *)mapView belowLayerIdentifier:(nonnull NSString *)layerIdentifier {
-    self = [self initWithMapView:mapView];
-    
-    return self;
+- (void)initializeLayer {
+    // This method should be overrided by subclasses.
 }
 
 - (void)addStyleAnnotation:(MGLStyleAnnotation *)styleAnnotation {

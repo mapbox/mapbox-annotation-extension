@@ -1,4 +1,4 @@
-#import <MapboxAnnotationsExtension/MapboxAnnotationsExtension.h>
+#import "MGLCircleStyleAnnotation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

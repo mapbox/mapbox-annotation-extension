@@ -41,6 +41,16 @@ extension ViewController : MGLMapViewDelegate {
         circleAnnotationController.add([circleAnnotation1, circleAnnotation2, circleAnnotation3, circleAnnotation4, circleAnnotation5])
         circleAnnotationController.circleTranslationAnchor = .map;
         
+        let coordinates = [
+            CLLocationCoordinate2D(latitude: 59.31, longitude: 18.06),
+            CLLocationCoordinate2D(latitude: 59.30, longitude: 18.05)
+        ]
+        let lineAnnotationController = MGLLineAnnotationController(mapView: mapView)
+        lineAnnotationController.lineCap = .round
+        let lineAnnotation1 = MGLLineStyleAnnotation(coordinates, count: UInt(coordinates.count), color: .purple)
+        lineAnnotation1.lineWidth = 5
+        lineAnnotationController.add([lineAnnotation1])
+        
     }
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {

@@ -1,5 +1,6 @@
 #import "MGLCircleAnnotationController.h"
 #import "MGLCircleStyleAnnotation_Private.h"
+#import "MGLEnums+MGLAnnotationsExtension.h"
 
 @interface MGLCircleAnnotationController()
 
@@ -7,6 +8,7 @@
 @property (nonatomic, strong) MGLStyleLayer *layer;
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSNumber *> *enabledPaintProperties;
 
+- (void)initializeLayer;
 - (void)enablePaintProperties:(MGLStyleAnnotation *)styleAnnotation;
 - (void)setPaintProperties;
 
@@ -14,26 +16,7 @@
 
 @implementation MGLCircleAnnotationController
 
-- (instancetype)initWithMapView:(MGLMapView *)mapView {
-    if (self = [super initWithMapView:mapView]) {
-        [self commonInit];
-        [self.mapView.style addLayer:self.layer];
-    }
-    return self;
-}
-
-- (instancetype)initWithMapView:(MGLMapView *)mapView belowLayerIdentifier:(NSString *)layerIdentifier {
-    if (self = [self initWithMapView:mapView]) {
-        [self commonInit];
-        MGLStyleLayer *topLayer = [self.mapView.style layerWithIdentifier:layerIdentifier];
-        [self.mapView.style insertLayer:self.layer belowLayer:topLayer];
-    }
-    return self;
-}
-
-- (void)commonInit {
-    
-    self.enabledPaintProperties = [NSMutableDictionary dictionary];
+- (void)initializeLayer {
     NSString *uuid = [[NSUUID UUID] UUIDString];
     
     NSString *circleLayerIdentifier = [NSString stringWithFormat:@"annotations-extension-layer-%@", uuid];
@@ -57,35 +40,36 @@
 }
 
 - (void)setCircleTranslationAnchor:(MGLCircleTranslationAnchor)circleTranslationAnchor {
-    NSExpression *constantValue = [NSExpression expressionForConstantValue:@(circleTranslationAnchor)];
+    NSExpression *constantValue = [NSExpression expressionForConstantValue:[NSValue valueWithMGLCircleTranslationAnchor:circleTranslationAnchor]];
     self.circleStyleLayer.circleTranslationAnchor = constantValue;
 }
 
 - (MGLCircleTranslationAnchor)circleTranslationAnchor {
     NSExpression *constantValue = self.circleStyleLayer.circleTranslationAnchor;
-    NSValue *value = [constantValue expressionValueWithObject:nil context:nil];
-    return value.MGLCircleTranslationAnchorValue;
+    NSString *value = [constantValue expressionValueWithObject:nil context:nil];
+    return [MGLEnums circleTranslationAnchorFromNSString:value];
 }
 
 - (void)setCirclePitchAlignment:(MGLCirclePitchAlignment)circlePitchAlignment {
-    NSExpression *constantValue = [NSExpression expressionForConstantValue:@(circlePitchAlignment)];
+    NSExpression *constantValue = [NSExpression expressionForConstantValue:[NSValue valueWithMGLCirclePitchAlignment:circlePitchAlignment]];
     self.circleStyleLayer.circlePitchAlignment = constantValue;
 }
 
 - (MGLCirclePitchAlignment)circlePitchAlignment {
     NSExpression *constantValue = self.circleStyleLayer.circlePitchAlignment;
-    NSValue *value = [constantValue expressionValueWithObject:nil context:nil];
-    return value.MGLCirclePitchAlignmentValue;
+    NSString *value = [constantValue expressionValueWithObject:nil context:nil];
+    return [MGLEnums circlePitchAlignmentFromNSString:value];
 }
 
 - (void)setCircleScaleAlignment:(MGLCircleScaleAlignment)circleScaleAlignment {
-    NSExpression *constantValue = [NSExpression expressionForConstantValue:@(circleScaleAlignment)];
+    NSExpression *constantValue = [NSExpression expressionForConstantValue:[NSValue valueWithMGLCircleScaleAlignment:circleScaleAlignment]];
     self.circleStyleLayer.circleScaleAlignment = constantValue;
 }
+
 - (MGLCircleScaleAlignment)circleScaleAlignment {
     NSExpression *constantValue = self.circleStyleLayer.circleScaleAlignment;
-    NSValue *value = [constantValue expressionValueWithObject:nil context:nil];
-    return value.MGLCircleScaleAlignmentValue;
+    NSString *value = [constantValue expressionValueWithObject:nil context:nil];
+    return [MGLEnums circleScaleAlignmentFromNSString:value];
 }
 
 - (void)enablePaintProperties:(MGLCircleStyleAnnotation *)styleAnnotation {

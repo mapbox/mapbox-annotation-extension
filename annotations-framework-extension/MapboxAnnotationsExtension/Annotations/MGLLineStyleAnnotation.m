@@ -2,14 +2,14 @@
 #import "UIColor+MGLAnnotationsExtension.h"
 #import "MGLEnums+MGLAnnotationsExtension.h"
 
-static NSString * const MGLPropertyLineJoin = @"line-join";
-static NSString * const MGLPropertyLineBlur = @"line-blur";
-static NSString * const MGLPropertyLineColor = @"line-color";
-static NSString * const MGLPropertyLineGapWidth = @"line-gap-width";
-static NSString * const MGLPropertyLineOffset = @"line-offset";
-static NSString * const MGLPropertyLineOpacity = @"line-opacity";
-static NSString * const MGLPropertyLinePattern = @"line-pattern";
-static NSString * const MGLPropertyLineWidth = @"line-width";
+NSString *const MGLPropertyLineJoin = @"line-join";
+NSString *const MGLPropertyLineBlur = @"line-blur";
+NSString *const MGLPropertyLineColor = @"line-color";
+NSString *const MGLPropertyLineGapWidth = @"line-gap-width";
+NSString *const MGLPropertyLineOffset = @"line-offset";
+NSString *const MGLPropertyLineOpacity = @"line-opacity";
+NSString *const MGLPropertyLinePattern = @"line-pattern";
+NSString *const MGLPropertyLineWidth = @"line-width";
 
 @interface MGLLineStyleAnnotation ()
 
@@ -23,7 +23,6 @@ static NSString * const MGLPropertyLineWidth = @"line-width";
 - (instancetype)init:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count {
     if (self = [super init]) {
         self.polylineFeature = [[MGLPolylineFeature alloc] init];
-        self.attributes = [NSMutableDictionary dictionary];
     }
 
     return self;
@@ -33,7 +32,6 @@ static NSString * const MGLPropertyLineWidth = @"line-width";
     if (self = [super init]) {
         self.polylineFeature = [MGLPolylineFeature polylineWithCoordinates:coordinates count:count];
         self.lineColor = color;
-        self.attributes = [NSMutableDictionary dictionary];
     }
 
     return self;
@@ -66,7 +64,7 @@ static NSString * const MGLPropertyLineWidth = @"line-width";
 
 - (UIColor *)lineColor {
     if (self.attributes[MGLPropertyLineColor]) {
-        NSString *colorString = MGLPropertyLineColor;
+        NSString *colorString = self.attributes[MGLPropertyLineColor];
         return [UIColor mgl_colorWithRgbaColorString:colorString];
     }
 
@@ -140,6 +138,11 @@ static NSString * const MGLPropertyLineWidth = @"line-width";
 
 - (void) setLineWidth:(CGFloat)lineWidth {
     self.attributes[MGLPropertyLineWidth] = @(lineWidth);
+}
+
+- (id<MGLFeature>)feature {
+    self.polylineFeature.attributes = self.attributes;
+    return self.polylineFeature;
 }
 
 @end

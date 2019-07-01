@@ -9,6 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) MGLSource *source;
 @property (nonatomic, strong) MGLStyleLayer *layer;
 
+- (void)initializeLayer;
 - (void)enablePaintProperties:(MGLStyleAnnotation *)styleAnnotation;
 - (void)setPaintProperties;
 
