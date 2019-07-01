@@ -79,6 +79,10 @@
         self.enabledPaintProperties[MGLPropertyPolygonOutlineColor] = @YES;
     }
 
+    if (styleAnnotation.attributes[MGLPropertyPolygonOutlineColor]) {
+        self.enabledPaintProperties[MGLPropertyPolygonOutlineColor] = @YES;
+    }
+
     if (styleAnnotation.attributes[MGLPropertyPolygonPattern]) {
         self.enabledPaintProperties[MGLPropertyPolygonPattern] = @YES;
     }
@@ -87,7 +91,6 @@
 - (void)setPaintProperties {
     if (self.enabledPaintProperties[MGLPropertyPolygonOpacity]) {
         self.fillStyleLayer.fillOpacity = [NSExpression expressionForKeyPath:MGLPropertyPolygonOpacity];
-
     }
 
     if (self.enabledPaintProperties[MGLPropertyPolygonColor]) {

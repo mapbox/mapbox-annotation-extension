@@ -77,6 +77,23 @@ extension ViewController : MGLMapViewDelegate {
         symbolAnnotationController.textTranslation = CGVector(dx: 10, dy: 0)
         symbolAnnotationController.add(symbolAnnotation1)
 
+        let polygonController = MGLPolygonAnnotationController(mapView: mapView)
+
+        let polygonCoordinates = [
+            CLLocationCoordinate2DMake(59.35, 18.06),
+            CLLocationCoordinate2DMake(59.33, 18.04),
+            CLLocationCoordinate2DMake(59.33, 18.09),
+            CLLocationCoordinate2DMake(59.35, 18.06)
+        ]
+
+        let polygonAnnotation = MGLPolygonStyleAnnotation(polygonCoordinates, count: UInt(polygonCoordinates.count))
+        polygonAnnotation.title = "I'm a triangle!"
+        polygonAnnotation.fillColor = .green
+        polygonAnnotation.fillOutlineColor = .red
+        polygonAnnotation.fillOpacity = 0.5
+
+        polygonController.add(polygonAnnotation)
+
     }
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
