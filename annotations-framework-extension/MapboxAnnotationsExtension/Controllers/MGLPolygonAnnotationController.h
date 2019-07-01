@@ -4,7 +4,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MGLPolygonAnnotationController : MGLAnnotationController
 
-@property (nonatomic, assign) BOOL fillAntialiased;
+@property (nonatomic, assign) BOOL fillAntialias;
 @property (nonatomic, assign) CGVector fillTranslation;
 @property (nonatomic, assign) MGLFillTranslationAnchor fillTranslationAnchor;
 

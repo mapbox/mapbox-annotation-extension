@@ -30,7 +30,7 @@
 
 # pragma mark Layout properties
 
-- (void)setFillAntialiased:(BOOL)fillAntialias {
+- (void)setFillAntialias:(BOOL)fillAntialias {
     NSExpression *constantValue = [NSExpression expressionForConstantValue:@(fillAntialias)];
     self.fillStyleLayer.fillAntialiased = constantValue;
 }
@@ -87,7 +87,6 @@
 - (void)setPaintProperties {
     if (self.enabledPaintProperties[MGLPropertyPolygonOpacity]) {
         self.fillStyleLayer.fillOpacity = [NSExpression expressionForKeyPath:MGLPropertyPolygonOpacity];
-
     }
 
     if (self.enabledPaintProperties[MGLPropertyPolygonColor]) {
