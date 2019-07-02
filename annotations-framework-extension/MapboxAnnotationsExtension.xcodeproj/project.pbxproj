@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		078F5F0B22BC3DA300460948 /* MGLStyleAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 078F5F0922BC3DA300460948 /* MGLStyleAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078F5F0C22BC3DA300460948 /* MGLStyleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 078F5F0A22BC3DA300460948 /* MGLStyleAnnotation.m */; };
+		079432AE22CACDB100499E8B /* MGLPolygonStyleAnnotation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 079432AD22CACDB100499E8B /* MGLPolygonStyleAnnotation_Private.h */; };
 		07CBD7EC22B8570400732884 /* MapboxAnnotationsExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CBD7EA22B8570400732884 /* MapboxAnnotationsExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F40B9AC22BC1B03003DB389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9AB22BC1B03003DB389 /* AppDelegate.swift */; };
 		1F40B9AE22BC1B03003DB389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9AD22BC1B03003DB389 /* ViewController.swift */; };
@@ -96,6 +97,7 @@
 /* Begin PBXFileReference section */
 		078F5F0922BC3DA300460948 /* MGLStyleAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MGLStyleAnnotation.h; path = MapboxAnnotationsExtension/Annotations/MGLStyleAnnotation.h; sourceTree = SOURCE_ROOT; };
 		078F5F0A22BC3DA300460948 /* MGLStyleAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MGLStyleAnnotation.m; path = MapboxAnnotationsExtension/Annotations/MGLStyleAnnotation.m; sourceTree = SOURCE_ROOT; };
+		079432AD22CACDB100499E8B /* MGLPolygonStyleAnnotation_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLPolygonStyleAnnotation_Private.h; sourceTree = "<group>"; };
 		07CBD7E722B8570400732884 /* MapboxAnnotationsExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MapboxAnnotationsExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CBD7EA22B8570400732884 /* MapboxAnnotationsExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapboxAnnotationsExtension.h; sourceTree = "<group>"; };
 		07CBD7EB22B8570400732884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				1FDAB56822BD5050003D6D34 /* MGLLineStyleAnnotation.h */,
 				1FD771CE22C7D17D00B626DC /* MGLLineStyleAnnotation_Private.h */,
 				1FDAB56922BD5050003D6D34 /* MGLLineStyleAnnotation.m */,
+				079432AD22CACDB100499E8B /* MGLPolygonStyleAnnotation_Private.h */,
 				1FDAB56C22BD5065003D6D34 /* MGLPolygonStyleAnnotation.h */,
 				1FDAB56D22BD5065003D6D34 /* MGLPolygonStyleAnnotation.m */,
 				1FDAB57022BD5083003D6D34 /* MGLSymbolStyleAnnotation.h */,
@@ -351,6 +354,7 @@
 				1FDAB5E122C55EB0003D6D34 /* MGLCircleStyleAnnotation_Private.h in Headers */,
 				1FDAB57622BD800A003D6D34 /* MGLCircleAnnotationController.h in Headers */,
 				1FDAB56E22BD5065003D6D34 /* MGLPolygonStyleAnnotation.h in Headers */,
+				079432AE22CACDB100499E8B /* MGLPolygonStyleAnnotation_Private.h in Headers */,
 				1F40B9E322BC523C003DB389 /* MGLAnnotationController_Private.h in Headers */,
 				1FD771D422C9262D00B626DC /* MGLSymbolStyleAnnotation_Private.h in Headers */,
 				078F5F0B22BC3DA300460948 /* MGLStyleAnnotation.h in Headers */,

@@ -59,6 +59,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)stringFromMGLTextTransform:(MGLTextTransform)textTransform;
 + (MGLTextTransform)textTransformFromNSString:(NSString *)textTransform;
 
+#pragma mark - Fill Style Layer enum properties
+
++ (NSString *)stringFromMGLFillTranslationAnchor:(MGLFillTranslationAnchor)translationAnchor;
++ (MGLFillTranslationAnchor)fillTranslationAnchorFromNSString:(NSString *)translationAnchorString;
+
 
 @end
 

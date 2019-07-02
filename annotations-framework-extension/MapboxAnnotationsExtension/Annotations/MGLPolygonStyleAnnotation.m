@@ -1,9 +1,17 @@
 #import "MGLPolygonStyleAnnotation.h"
+#import "UIColor+MGLAnnotationsExtension.h"
 
-static NSString * const MGLPropertyPolygonOpacity = @"";
-static NSString * const MGLPropertyPolygonColor = @"";
-static NSString * const MGLPropertyPolygonOutlineColor = @"";
-static NSString * const MGLPropertyPolygonPattern = @"";
+NSString *const MGLPropertyPolygonOpacity = @"fill-opacity";
+NSString *const MGLPropertyPolygonColor = @"fill-color";
+NSString *const MGLPropertyPolygonOutlineColor = @"fill-outline-color";
+NSString *const MGLPropertyPolygonPattern = @"fill-pattern";
+
+@interface MGLPolygonStyleAnnotation ()
+
+@property (nonatomic, strong) NSMutableDictionary<NSString *, id> *attributes;
+@property (nonatomic, strong) MGLPolygonFeature * polygonFeature;
+
+@end
 
 @implementation MGLPolygonStyleAnnotation
 

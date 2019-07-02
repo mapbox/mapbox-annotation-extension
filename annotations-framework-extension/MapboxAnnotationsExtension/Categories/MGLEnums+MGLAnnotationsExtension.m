@@ -298,4 +298,22 @@
     return constantValues[textTransform].MGLTextTransformValue;
 }
 
+#pragma mark - Fill layer enum transformation
+
++ (NSString *)stringFromMGLFillTranslationAnchor:(MGLFillTranslationAnchor)translationAnchor {
+    NSDictionary<NSNumber *, NSString* > *constantValues = @{
+                                                             [NSNumber numberWithInteger:MGLFillTranslationAnchorMap] : @"map",
+                                                             [NSNumber numberWithInteger:MGLFillTranslationAnchorViewport] : @"viewport"
+                                                             };
+    return constantValues[[NSNumber numberWithInteger:translationAnchor]];
+}
+
++ (MGLFillTranslationAnchor)fillTranslationAnchorFromNSString:(NSString *)translationAnchor {
+    NSDictionary<NSString *, NSValue *> *constantValues = @{
+                                                            @"map" : [NSValue valueWithMGLFillTranslationAnchor:MGLFillTranslationAnchorMap],
+                                                            @"viewport" : [NSValue valueWithMGLFillTranslationAnchor:MGLFillTranslationAnchorViewport]
+                                                            };
+    return constantValues[translationAnchor].MGLFillTranslationAnchorValue;
+}
+
 @end
