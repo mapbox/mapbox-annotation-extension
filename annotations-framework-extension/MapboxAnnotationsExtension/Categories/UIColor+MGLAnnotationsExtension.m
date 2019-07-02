@@ -5,16 +5,17 @@
 - (NSString *)mgl_rgbaColorString {
     CGFloat r, g, b, a;
     [self getRed:&r green:&g blue:&b alpha:&a];
-    CGFloat multiplier = 255.0;
-    // UIColor provides non-premultiplied color components, so we have to premultiply each
-    // color component with the alpha value to transform it into a valid
-    // mbgl::Color which expects premultiplied color components.
-    return [NSString stringWithFormat:@"rgba(%.0f, %.0f, %.0f, %.0f)", r*a*multiplier, g*a*multiplier, b*a*multiplier, a];
+    CGFloat multiplier = 255;
+
+    return [NSString stringWithFormat:@"rgba(%ld, %ld, %ld, %.1f)",
+            (NSInteger)(r*multiplier),
+            (NSInteger)(g*multiplier),
+            (NSInteger)(b*multiplier), a];
 }
 
 + (UIColor *)mgl_colorWithRgbaColorString:(NSString *)rgbaColorString {
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"([0-9]{1,3})"
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[0-9]{1,3}\\.?[0-9]+"
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:nil];
     NSArray *matches = [regex matchesInString:rgbaColorString
@@ -33,15 +34,9 @@
         CGFloat a = alpha.doubleValue;
         CGFloat multiplier = 255;
         
-        if (a == 0.0f) {
-            r = red.doubleValue/multiplier;
-            g = green.doubleValue/multiplier;
-            b = blue.doubleValue/multiplier;
-        } else {
-            r = (red.doubleValue/a)/multiplier;
-            g = (green.doubleValue/a)/multiplier;
-            b = (blue.doubleValue/a)/multiplier;
-        }
+        r = red.doubleValue/multiplier;
+        g = green.doubleValue/multiplier;
+        b = blue.doubleValue/multiplier;
         return [UIColor colorWithRed:r green:g blue:b alpha:a];
     }
     

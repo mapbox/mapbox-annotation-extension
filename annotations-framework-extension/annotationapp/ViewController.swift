@@ -63,7 +63,7 @@ extension ViewController : MGLMapViewDelegate {
         symbolAnnotation1.iconImageName = "attraction"
         symbolAnnotation1.iconScale = 0.5
         
-        symbolAnnotation1.iconHaloColor = UIColor.white.withAlphaComponent(0.5)
+        symbolAnnotation1.iconHaloColor = UIColor.white.withAlphaComponent(0.8)
         symbolAnnotation1.iconHaloWidth = 1
         
         symbolAnnotation1.text = "Come Here!"
