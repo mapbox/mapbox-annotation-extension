@@ -9,7 +9,7 @@
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSNumber *> *enabledPaintProperties;
 
 - (void)initializeLayer;
-- (void)enablePaintProperties:(MGLStyleAnnotation *)styleAnnotation;
+- (void)enabledPaintProperties:(MGLStyleAnnotation *)styleAnnotation;
 - (void)setPaintProperties;
 
 @end
@@ -66,13 +66,17 @@
 
 # pragma mark Paint properties
 
-- (void)enablePaintProperties:(MGLPolygonStyleAnnotation *)styleAnnotation {
+- (void)enabledPaintProperties:(MGLPolygonStyleAnnotation *)styleAnnotation {
     if (styleAnnotation.attributes[MGLPropertyPolygonOpacity]) {
         self.enabledPaintProperties[MGLPropertyPolygonOpacity] = @YES;
     }
 
     if (styleAnnotation.attributes[MGLPropertyPolygonColor]) {
         self.enabledPaintProperties[MGLPropertyPolygonColor] = @YES;
+    }
+
+    if (styleAnnotation.attributes[MGLPropertyPolygonOutlineColor]) {
+        self.enabledPaintProperties[MGLPropertyPolygonOutlineColor] = @YES;
     }
 
     if (styleAnnotation.attributes[MGLPropertyPolygonOutlineColor]) {
