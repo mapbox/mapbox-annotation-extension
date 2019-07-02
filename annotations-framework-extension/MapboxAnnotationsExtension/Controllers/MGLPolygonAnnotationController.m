@@ -6,7 +6,7 @@
 
 @property (nonatomic, strong) MGLShapeSource *source;
 @property (nonatomic, strong) MGLStyleLayer *layer;
-@property (nonatomic, strong) NSMutableDictionary<NSString *, NSNumber *> *enablePaintProperties;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, NSNumber *> *enabledPaintProperties;
 
 - (void)initializeLayer;
 - (void)enablePaintProperties:(MGLStyleAnnotation *)styleAnnotation;
@@ -68,15 +68,15 @@
 
 - (void)enablePaintProperties:(MGLPolygonStyleAnnotation *)styleAnnotation {
     if (styleAnnotation.attributes[MGLPropertyPolygonOpacity]) {
-        self.enablePaintProperties[MGLPropertyPolygonOpacity] = @YES;
+        self.enabledPaintProperties[MGLPropertyPolygonOpacity] = @YES;
     }
 
     if (styleAnnotation.attributes[MGLPropertyPolygonColor]) {
-        self.enablePaintProperties[MGLPropertyPolygonColor] = @YES;
+        self.enabledPaintProperties[MGLPropertyPolygonColor] = @YES;
     }
 
     if (styleAnnotation.attributes[MGLPropertyPolygonOutlineColor]) {
-        self.enablePaintProperties[MGLPropertyPolygonOutlineColor] = @YES;
+        self.enabledPaintProperties[MGLPropertyPolygonOutlineColor] = @YES;
     }
 
     if (styleAnnotation.attributes[MGLPropertyPolygonOutlineColor]) {
@@ -84,24 +84,24 @@
     }
 
     if (styleAnnotation.attributes[MGLPropertyPolygonPattern]) {
-        self.enablePaintProperties[MGLPropertyPolygonPattern] = @YES;
+        self.enabledPaintProperties[MGLPropertyPolygonPattern] = @YES;
     }
 }
 
 - (void)setPaintProperties {
-    if (self.enablePaintProperties[MGLPropertyPolygonOpacity]) {
+    if (self.enabledPaintProperties[MGLPropertyPolygonOpacity]) {
         self.fillStyleLayer.fillOpacity = [NSExpression expressionForKeyPath:MGLPropertyPolygonOpacity];
     }
 
-    if (self.enablePaintProperties[MGLPropertyPolygonColor]) {
+    if (self.enabledPaintProperties[MGLPropertyPolygonColor]) {
         self.fillStyleLayer.fillColor = [NSExpression expressionForKeyPath:MGLPropertyPolygonColor];
     }
 
-    if (self.enablePaintProperties[MGLPropertyPolygonOutlineColor]) {
+    if (self.enabledPaintProperties[MGLPropertyPolygonOutlineColor]) {
         self.fillStyleLayer.fillOutlineColor = [NSExpression expressionForKeyPath:MGLPropertyPolygonOutlineColor];
     }
 
-    if (self.enablePaintProperties[MGLPropertyPolygonPattern]) {
+    if (self.enabledPaintProperties[MGLPropertyPolygonPattern]) {
         self.fillStyleLayer.fillPattern = [NSExpression expressionForConstantValue:MGLPropertyPolygonPattern];
     }
 }
