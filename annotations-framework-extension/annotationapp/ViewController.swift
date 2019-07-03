@@ -23,19 +23,19 @@ extension ViewController : MGLMapViewDelegate {
     
     func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
         circleAnnotationController = MGLCircleAnnotationController(mapView: self.mapView)
-        let circleAnnotation1 = MGLCircleStyleAnnotation(CLLocationCoordinate2D(latitude: 59.31, longitude: 18.06), radius: 3.0, color: .blue)
+        let circleAnnotation1 = MGLCircleStyleAnnotation(center: CLLocationCoordinate2D(latitude: 59.31, longitude: 18.06), radius: 3.0, color: .blue)
         circleAnnotation1.title = "circleAnnotation1";
         
-        let circleAnnotation2 = MGLCircleStyleAnnotation(CLLocationCoordinate2D(latitude: 59.30, longitude: 18.05), radius: 4.0, color: .yellow)
+        let circleAnnotation2 = MGLCircleStyleAnnotation(center: CLLocationCoordinate2D(latitude: 59.30, longitude: 18.05), radius: 4.0, color: .yellow)
         circleAnnotation2.title = "circleAnnotation2";
         
-        let circleAnnotation3 = MGLCircleStyleAnnotation(CLLocationCoordinate2D(latitude: 59.29, longitude: 18.04), radius: 5.0, color: .red)
+        let circleAnnotation3 = MGLCircleStyleAnnotation(center: CLLocationCoordinate2D(latitude: 59.29, longitude: 18.04), radius: 5.0, color: .red)
         circleAnnotation3.title = "circleAnnotation3";
         
-        let circleAnnotation4 = MGLCircleStyleAnnotation(CLLocationCoordinate2D(latitude: 59.28, longitude: 18.03), radius: 6.0, color: .orange)
+        let circleAnnotation4 = MGLCircleStyleAnnotation(center: CLLocationCoordinate2D(latitude: 59.28, longitude: 18.03), radius: 6.0, color: .orange)
         circleAnnotation4.title = "circleAnnotation4";
         
-        let circleAnnotation5 = MGLCircleStyleAnnotation(CLLocationCoordinate2D(latitude: 59.27, longitude: 18.02), radius: 7.0, color: .green)
+        let circleAnnotation5 = MGLCircleStyleAnnotation(center: CLLocationCoordinate2D(latitude: 59.27, longitude: 18.02), radius: 7.0, color: .green)
         circleAnnotation5.title = "circleAnnotation5";
         
         circleAnnotationController.add([circleAnnotation1, circleAnnotation2, circleAnnotation3, circleAnnotation4, circleAnnotation5])
@@ -47,7 +47,7 @@ extension ViewController : MGLMapViewDelegate {
         ]
         let lineAnnotationController = MGLLineAnnotationController(mapView: mapView)
         lineAnnotationController.lineCap = .round
-        let lineAnnotation1 = MGLLineStyleAnnotation(coordinates, count: UInt(coordinates.count), color: .purple)
+        let lineAnnotation1 = MGLLineStyleAnnotation(coordinates: coordinates, count: UInt(coordinates.count), color: .purple)
         lineAnnotation1.lineWidth = 5
         lineAnnotationController.add([lineAnnotation1])
         
@@ -59,7 +59,7 @@ extension ViewController : MGLMapViewDelegate {
 
         let symbolAnnotationController = MGLSymbolAnnotationController(mapView: self.mapView)
         
-        let symbolAnnotation1 = MGLSymbolStyleAnnotation(CLLocationCoordinate2DMake(59.29, 18.06));
+        let symbolAnnotation1 = MGLSymbolStyleAnnotation(coordinate: CLLocationCoordinate2DMake(59.29, 18.06));
         symbolAnnotation1.iconImageName = "attraction"
         symbolAnnotation1.iconScale = 0.5
         
@@ -86,7 +86,7 @@ extension ViewController : MGLMapViewDelegate {
             CLLocationCoordinate2DMake(59.35, 18.06)
         ]
         
-        let polygonAnnotation = MGLPolygonStyleAnnotation(polygonCoordinates, count: UInt(polygonCoordinates.count))
+        let polygonAnnotation = MGLPolygonStyleAnnotation(coordinates: polygonCoordinates, count: UInt(polygonCoordinates.count))
         polygonAnnotation.title = "I'm a triangle!"
         polygonAnnotation.fillOutlineColor = .red
         polygonAnnotation.fillColor = .green

@@ -13,7 +13,7 @@
         CLLocationCoordinate2DMake(0, 0),
         CLLocationCoordinate2DMake(1, 1)
     };
-    MGLLineStyleAnnotation *annotation = [[MGLLineStyleAnnotation alloc] init:coordinates count:2];
+    MGLLineStyleAnnotation *annotation = [[MGLLineStyleAnnotation alloc] initWithCoordinates:coordinates count:2];
     // line-join
     {
         XCTAssertEqual(MGLLineJoinMiter, annotation.lineJoin);

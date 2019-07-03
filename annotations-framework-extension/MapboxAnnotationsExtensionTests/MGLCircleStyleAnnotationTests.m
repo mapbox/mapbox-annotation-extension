@@ -9,7 +9,7 @@
 @implementation MGLCircleStyleAnnotationTests
 
 - (void)testProperties {
-    MGLCircleStyleAnnotation *annotation = [[MGLCircleStyleAnnotation alloc] init:CLLocationCoordinate2DMake(0, 0)];
+    MGLCircleStyleAnnotation *annotation = [[MGLCircleStyleAnnotation alloc] initWithCenter:CLLocationCoordinate2DMake(0, 0)];
     
     // circle-radius
     {

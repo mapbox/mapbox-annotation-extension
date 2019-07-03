@@ -15,7 +15,7 @@ NSString *const MGLPropertyPolygonPattern = @"fill-pattern";
 
 @implementation MGLPolygonStyleAnnotation
 
-- (instancetype)init:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count {
+- (instancetype)initWithCoordinates:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count {
     if (self = [super init]) {
         self.polygonFeature = [MGLPolygonFeature polygonWithCoordinates:coordinates count:count];
     }
@@ -23,16 +23,16 @@ NSString *const MGLPropertyPolygonPattern = @"fill-pattern";
     return self;
 }
 
-- (instancetype)init:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count fillColor:(UIColor *)fillColor {
-    if (self = [self init:coordinates count:count]) {
+- (instancetype)initWithCoordinates:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count fillColor:(UIColor *)fillColor {
+    if (self = [self initWithCoordinates:coordinates count:count]) {
         self.fillColor = fillColor;
     }
 
     return self;
 }
 
-- (instancetype)init:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count interiorPolygons:(NSArray<MGLPolygonFeature *> *)interiorPolygons {
-    if (self = [self init:coordinates count:count]) {
+- (instancetype)initWithCoordinates:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count interiorPolygons:(NSArray<MGLPolygonFeature *> *)interiorPolygons {
+    if (self = [self initWithCoordinates:coordinates count:count]) {
         self.interiorPolygons = interiorPolygons;
     }
 

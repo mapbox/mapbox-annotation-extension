@@ -36,9 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat maximumTextWidth;
 @property (nonatomic, assign) NSInteger symbolSortKey;
 
-- (instancetype)init:(CLLocationCoordinate2D)coordinate;
-- (instancetype)init:(CLLocationCoordinate2D)coordinate text:(NSString *)text color:(UIColor *)color;
-- (instancetype)init:(CLLocationCoordinate2D)coordinate iconImageName:(NSString *)iconImageName;
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate;
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate text:(NSString *)text color:(UIColor *)color;
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate iconImageName:(NSString *)iconImageName;
 
 @end
 

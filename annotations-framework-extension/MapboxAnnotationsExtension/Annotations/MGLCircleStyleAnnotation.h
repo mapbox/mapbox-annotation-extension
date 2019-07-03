@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) UIColor *circleColor;
 @property (nonatomic, assign) CGFloat circleOpacity;
 
-- (instancetype)init:(CLLocationCoordinate2D)center;
-- (instancetype)init:(CLLocationCoordinate2D)center radius:(CGFloat)radius;
-- (instancetype)init:(CLLocationCoordinate2D)center radius:(CGFloat)radius color:(UIColor *)color;
+- (instancetype)initWithCenter:(CLLocationCoordinate2D)center;
+- (instancetype)initWithCenter:(CLLocationCoordinate2D)center radius:(CGFloat)radius;
+- (instancetype)initWithCenter:(CLLocationCoordinate2D)center radius:(CGFloat)radius color:(UIColor *)color;
 
 @end
 

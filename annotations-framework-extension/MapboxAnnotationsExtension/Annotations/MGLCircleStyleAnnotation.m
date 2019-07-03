@@ -18,7 +18,7 @@ NSString *const MGLPropertyCircleStrokeOpacity = @"circle-stroke-opacity";
 
 @implementation MGLCircleStyleAnnotation
 
-- (instancetype)init:(CLLocationCoordinate2D)center {
+- (instancetype)initWithCenter:(CLLocationCoordinate2D)center {
     if (self = [super init]) {
         self.pointFeature = [[MGLPointFeature alloc] init];
         self.pointFeature.coordinate = center;
@@ -26,15 +26,15 @@ NSString *const MGLPropertyCircleStrokeOpacity = @"circle-stroke-opacity";
     return self;
 }
 
-- (instancetype)init:(CLLocationCoordinate2D)center radius:(CGFloat)radius {
-    if (self = [self init:center]) {
+- (instancetype)initWithCenter:(CLLocationCoordinate2D)center radius:(CGFloat)radius {
+    if (self = [self initWithCenter:center]) {
         self.circleRadius = radius;
     }
     return self;
 }
 
-- (instancetype)init:(CLLocationCoordinate2D)center radius:(CGFloat)radius color:(UIColor *)color {
-    if (self = [self init:center radius:radius]) {
+- (instancetype)initWithCenter:(CLLocationCoordinate2D)center radius:(CGFloat)radius color:(UIColor *)color {
+    if (self = [self initWithCenter:center radius:radius]) {
         self.circleColor = color;
     }
     return self;

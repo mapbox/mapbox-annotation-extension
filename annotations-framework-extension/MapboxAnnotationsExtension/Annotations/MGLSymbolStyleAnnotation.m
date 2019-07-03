@@ -41,7 +41,7 @@ NSString *const  MGLPropertySymbolSortKey = @"symbol-sort-key";
 
 @implementation MGLSymbolStyleAnnotation
 
-- (instancetype)init:(CLLocationCoordinate2D)coordinate {
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate {
     if (self = [super init]) {
         self.pointFeature = [[MGLPointFeature alloc] init];
         self.pointFeature.coordinate = coordinate;
@@ -49,16 +49,16 @@ NSString *const  MGLPropertySymbolSortKey = @"symbol-sort-key";
     return self;
 }
 
-- (instancetype)init:(CLLocationCoordinate2D)coordinate text:(NSString *)text color:(UIColor *)color {
-    if (self = [self init:coordinate]) {
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate text:(NSString *)text color:(UIColor *)color {
+    if (self = [self initWithCoordinate:coordinate]) {
         self.text = text;
         self.textColor = color;
     }
     return self;
 }
 
-- (instancetype)init:(CLLocationCoordinate2D)coordinate iconImageName:(NSString *)iconImageName {
-    if (self = [self init:coordinate]) {
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate iconImageName:(NSString *)iconImageName {
+    if (self = [self initWithCoordinate:coordinate]) {
         self.iconImageName = iconImageName;
     }
     return self;

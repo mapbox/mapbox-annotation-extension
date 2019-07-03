@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *linePattern;
 @property (nonatomic, assign) CGFloat lineWidth;
 
-- (instancetype)init:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count;
-- (instancetype)init:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count color:(UIColor *)color;
+- (instancetype)initWithCoordinates:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count;
+- (instancetype)initWithCoordinates:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count color:(UIColor *)color;
 
 @end
 

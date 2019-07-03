@@ -20,7 +20,7 @@ NSString *const MGLPropertyLineWidth = @"line-width";
 
 @implementation MGLLineStyleAnnotation
 
-- (instancetype)init:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count {
+- (instancetype)initWithCoordinates:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count {
     if (self = [super init]) {
         self.polylineFeature = [[MGLPolylineFeature alloc] init];
     }
@@ -28,7 +28,7 @@ NSString *const MGLPropertyLineWidth = @"line-width";
     return self;
 }
 
-- (instancetype)init:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count color:(UIColor *)color {
+- (instancetype)initWithCoordinates:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count color:(UIColor *)color {
     if (self = [super init]) {
         self.polylineFeature = [MGLPolylineFeature polylineWithCoordinates:coordinates count:count];
         self.lineColor = color;

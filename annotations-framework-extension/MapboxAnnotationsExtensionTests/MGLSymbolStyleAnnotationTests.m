@@ -9,7 +9,7 @@
 @implementation MGLSymbolStyleAnnotationTests
 
 - (void)testProperties {
-    MGLSymbolStyleAnnotation *annotation = [[MGLSymbolStyleAnnotation alloc] init:CLLocationCoordinate2DMake(0, 0)];
+    MGLSymbolStyleAnnotation *annotation = [[MGLSymbolStyleAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(0, 0)];
     // icon-scale
     {
         XCTAssertEqual(1.0, annotation.iconScale);

@@ -14,7 +14,7 @@
         CLLocationCoordinate2DMake(0, 1),
         CLLocationCoordinate2DMake(1, 1)
     };
-    MGLPolygonStyleAnnotation *annotation = [[MGLPolygonStyleAnnotation alloc] init:coordinates count:3];
+    MGLPolygonStyleAnnotation *annotation = [[MGLPolygonStyleAnnotation alloc] initWithCoordinates:coordinates count:3];
     // fill-opacity
     {
         XCTAssertEqual(1.0, annotation.fillOpacity);
