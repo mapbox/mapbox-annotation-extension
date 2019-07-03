@@ -150,8 +150,8 @@
 
 + (MGLSymbolPlacement)symbolPlacementFromNSString:(NSString *)symbolPlacement {
     NSDictionary<NSString *, NSValue *> *constantValues = @{
-                                                            @"point" : [NSValue valueWithMGLSymbolPlacement:MGLSymbolPlacementLine],
-                                                            @"line" : [NSValue valueWithMGLSymbolPlacement:MGLSymbolPlacementPoint],
+                                                            @"point" : [NSValue valueWithMGLSymbolPlacement:MGLSymbolPlacementPoint],
+                                                            @"line" : [NSValue valueWithMGLSymbolPlacement:MGLSymbolPlacementLine],
                                                             @"line-center" : [NSValue valueWithMGLSymbolPlacement:MGLSymbolPlacementLineCenter],
                                                             };
     return constantValues[symbolPlacement].MGLSymbolPlacementValue;

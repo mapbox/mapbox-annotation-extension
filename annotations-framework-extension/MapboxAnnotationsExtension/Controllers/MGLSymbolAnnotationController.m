@@ -260,15 +260,15 @@
     return [MGLEnums textRotationAlignmentFromNSString:value];
 }
 
-- (void)setTextVariableAnchor:(MGLTextAnchor)textVariableAnchor {
-    NSExpression *constantValue = [NSExpression expressionForConstantValue:[NSValue valueWithMGLTextAnchor:textVariableAnchor]];
+- (void)setTextVariableAnchor:(NSArray<NSString *>*)textVariableAnchor {
+    NSExpression *constantValue = [NSExpression expressionForConstantValue:textVariableAnchor];
     self.symbolStyleLayer.textVariableAnchor = constantValue;
 }
 
-- (MGLTextAnchor)textVariableAnchor {
+- (NSArray<NSString *> *)textVariableAnchor {
     NSExpression *constantValue = self.symbolStyleLayer.textVariableAnchor;
-    NSString *value = [constantValue expressionValueWithObject:nil context:nil];
-    return [MGLEnums textAnchorFromNSString:value];
+    NSArray *value = [constantValue expressionValueWithObject:nil context:nil];
+    return value;
 }
 
 - (void)setIconTranslation:(CGVector)iconTranslation {
@@ -304,7 +304,7 @@
     return value.CGVectorValue;
 }
 
-- (void)settTextTranslationAnchor:(MGLTextTranslationAnchor)textTranslationAnchor {
+- (void)setTextTranslationAnchor:(MGLTextTranslationAnchor)textTranslationAnchor {
     NSExpression *constantValue = [NSExpression expressionForConstantValue:[NSValue valueWithMGLTextTranslationAnchor:textTranslationAnchor]];
     self.symbolStyleLayer.textTranslationAnchor = constantValue;
 }

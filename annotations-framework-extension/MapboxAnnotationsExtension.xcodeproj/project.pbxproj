@@ -26,6 +26,15 @@
 		1F40B9E322BC523C003DB389 /* MGLAnnotationController_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F40B9E122BC523C003DB389 /* MGLAnnotationController_Private.h */; };
 		1FD771D022C7D17D00B626DC /* MGLLineStyleAnnotation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD771CE22C7D17D00B626DC /* MGLLineStyleAnnotation_Private.h */; };
 		1FD771D422C9262D00B626DC /* MGLSymbolStyleAnnotation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD771D222C9262D00B626DC /* MGLSymbolStyleAnnotation_Private.h */; };
+		1FD771DE22CC072400B626DC /* MGLCircleStyleAnnotationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD771DD22CC072400B626DC /* MGLCircleStyleAnnotationTests.m */; };
+		1FD771E022CC113E00B626DC /* MGLCircleAnnotationControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD771DF22CC113E00B626DC /* MGLCircleAnnotationControllerTests.m */; };
+		1FD771E222CC121700B626DC /* one-liner.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FD771E122CC121700B626DC /* one-liner.json */; };
+		1FD771E422CD1DE100B626DC /* MGLLineStyleAnnotationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD771E322CD1DE100B626DC /* MGLLineStyleAnnotationTests.m */; };
+		1FD771E622CD1E0600B626DC /* MGLLineAnnotationControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD771E522CD1E0600B626DC /* MGLLineAnnotationControllerTests.m */; };
+		1FD771E922CD2DE300B626DC /* MGLPolygonStyleAnnotationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD771E822CD2DE300B626DC /* MGLPolygonStyleAnnotationTests.m */; };
+		1FD771EB22CD2DFA00B626DC /* MGLPolygonAnnotationControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD771EA22CD2DFA00B626DC /* MGLPolygonAnnotationControllerTests.m */; };
+		1FD771ED22CD3E4900B626DC /* MGLSymbolStyleAnnotationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD771EC22CD3E4900B626DC /* MGLSymbolStyleAnnotationTests.m */; };
+		1FD771EF22CD3E5E00B626DC /* MGLSymbolAnnotationControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD771EE22CD3E5E00B626DC /* MGLSymbolAnnotationControllerTests.m */; };
 		1FDAB56622BD5039003D6D34 /* MGLCircleStyleAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDAB56422BD5039003D6D34 /* MGLCircleStyleAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FDAB56722BD5039003D6D34 /* MGLCircleStyleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB56522BD5039003D6D34 /* MGLCircleStyleAnnotation.m */; };
 		1FDAB56A22BD5050003D6D34 /* MGLLineStyleAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDAB56822BD5050003D6D34 /* MGLLineStyleAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,7 +49,6 @@
 		1FDAB57822BD801E003D6D34 /* MGLPolygonAnnotationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F40B9DD22BC31D6003DB389 /* MGLPolygonAnnotationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FDAB58822BD8DD7003D6D34 /* MapboxAnnotationsExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CBD7E722B8570400732884 /* MapboxAnnotationsExtension.framework */; };
 		1FDAB58922BD8DD7003D6D34 /* MapboxAnnotationsExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07CBD7E722B8570400732884 /* MapboxAnnotationsExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1FDAB5C622C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB5C522C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.m */; };
 		1FDAB5C822C3FAEB003D6D34 /* MapboxAnnotationsExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07CBD7E722B8570400732884 /* MapboxAnnotationsExtension.framework */; };
 		1FDAB5D222C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FDAB5D022C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.h */; };
 		1FDAB5D322C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB5D122C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.m */; };
@@ -125,6 +133,15 @@
 		1F40B9E122BC523C003DB389 /* MGLAnnotationController_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLAnnotationController_Private.h; sourceTree = "<group>"; };
 		1FD771CE22C7D17D00B626DC /* MGLLineStyleAnnotation_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLLineStyleAnnotation_Private.h; sourceTree = "<group>"; };
 		1FD771D222C9262D00B626DC /* MGLSymbolStyleAnnotation_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLSymbolStyleAnnotation_Private.h; sourceTree = "<group>"; };
+		1FD771DD22CC072400B626DC /* MGLCircleStyleAnnotationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLCircleStyleAnnotationTests.m; sourceTree = "<group>"; };
+		1FD771DF22CC113E00B626DC /* MGLCircleAnnotationControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLCircleAnnotationControllerTests.m; sourceTree = "<group>"; };
+		1FD771E122CC121700B626DC /* one-liner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "one-liner.json"; sourceTree = "<group>"; };
+		1FD771E322CD1DE100B626DC /* MGLLineStyleAnnotationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLLineStyleAnnotationTests.m; sourceTree = "<group>"; };
+		1FD771E522CD1E0600B626DC /* MGLLineAnnotationControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLLineAnnotationControllerTests.m; sourceTree = "<group>"; };
+		1FD771E822CD2DE300B626DC /* MGLPolygonStyleAnnotationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLPolygonStyleAnnotationTests.m; sourceTree = "<group>"; };
+		1FD771EA22CD2DFA00B626DC /* MGLPolygonAnnotationControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLPolygonAnnotationControllerTests.m; sourceTree = "<group>"; };
+		1FD771EC22CD3E4900B626DC /* MGLSymbolStyleAnnotationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLSymbolStyleAnnotationTests.m; sourceTree = "<group>"; };
+		1FD771EE22CD3E5E00B626DC /* MGLSymbolAnnotationControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLSymbolAnnotationControllerTests.m; sourceTree = "<group>"; };
 		1FDAB56422BD5039003D6D34 /* MGLCircleStyleAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLCircleStyleAnnotation.h; sourceTree = "<group>"; };
 		1FDAB56522BD5039003D6D34 /* MGLCircleStyleAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLCircleStyleAnnotation.m; sourceTree = "<group>"; };
 		1FDAB56822BD5050003D6D34 /* MGLLineStyleAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLLineStyleAnnotation.h; sourceTree = "<group>"; };
@@ -134,7 +151,6 @@
 		1FDAB57022BD5083003D6D34 /* MGLSymbolStyleAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLSymbolStyleAnnotation.h; sourceTree = "<group>"; };
 		1FDAB57122BD5083003D6D34 /* MGLSymbolStyleAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLSymbolStyleAnnotation.m; sourceTree = "<group>"; };
 		1FDAB5C322C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapboxAnnotationsExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FDAB5C522C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapboxAnnotationsExtensionTests.m; sourceTree = "<group>"; };
 		1FDAB5C722C3FAEB003D6D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FDAB5D022C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+MGLAnnotationsExtension.h"; sourceTree = "<group>"; };
 		1FDAB5D122C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MGLAnnotationsExtension.m"; sourceTree = "<group>"; };
@@ -297,9 +313,17 @@
 		1FDAB5C422C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests */ = {
 			isa = PBXGroup;
 			children = (
-				1FDAB5C522C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.m */,
 				1FDAB5C722C3FAEB003D6D34 /* Info.plist */,
+				1FD771E122CC121700B626DC /* one-liner.json */,
 				1FDAB5D422C42564003D6D34 /* UIColorMGLAnnotationsExtension.m */,
+				1FD771DD22CC072400B626DC /* MGLCircleStyleAnnotationTests.m */,
+				1FD771DF22CC113E00B626DC /* MGLCircleAnnotationControllerTests.m */,
+				1FD771E322CD1DE100B626DC /* MGLLineStyleAnnotationTests.m */,
+				1FD771E522CD1E0600B626DC /* MGLLineAnnotationControllerTests.m */,
+				1FD771E822CD2DE300B626DC /* MGLPolygonStyleAnnotationTests.m */,
+				1FD771EA22CD2DFA00B626DC /* MGLPolygonAnnotationControllerTests.m */,
+				1FD771EC22CD3E4900B626DC /* MGLSymbolStyleAnnotationTests.m */,
+				1FD771EE22CD3E5E00B626DC /* MGLSymbolAnnotationControllerTests.m */,
 			);
 			path = MapboxAnnotationsExtensionTests;
 			sourceTree = "<group>";
@@ -531,6 +555,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD771E222CC121700B626DC /* one-liner.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,8 +725,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD771E922CD2DE300B626DC /* MGLPolygonStyleAnnotationTests.m in Sources */,
 				1FDAB5D522C42564003D6D34 /* UIColorMGLAnnotationsExtension.m in Sources */,
-				1FDAB5C622C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests.m in Sources */,
+				1FD771E622CD1E0600B626DC /* MGLLineAnnotationControllerTests.m in Sources */,
+				1FD771E022CC113E00B626DC /* MGLCircleAnnotationControllerTests.m in Sources */,
+				1FD771DE22CC072400B626DC /* MGLCircleStyleAnnotationTests.m in Sources */,
+				1FD771E422CD1DE100B626DC /* MGLLineStyleAnnotationTests.m in Sources */,
+				1FD771EB22CD2DFA00B626DC /* MGLPolygonAnnotationControllerTests.m in Sources */,
+				1FD771ED22CD3E4900B626DC /* MGLSymbolStyleAnnotationTests.m in Sources */,
+				1FD771EF22CD3E5E00B626DC /* MGLSymbolAnnotationControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

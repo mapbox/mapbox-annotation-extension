@@ -68,7 +68,7 @@ NSString *const MGLPropertyLineWidth = @"line-width";
         return [UIColor mgl_colorWithRgbaColorString:colorString];
     }
 
-    return nil;
+    return UIColor.blackColor;
 }
 
 - (void)setLineColor:(UIColor *)lineColor {

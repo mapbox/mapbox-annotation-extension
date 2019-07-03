@@ -15,7 +15,7 @@
 
 + (UIColor *)mgl_colorWithRgbaColorString:(NSString *)rgbaColorString {
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[0-9]{1,3}\\.?[0-9]+"
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[0-9]{0,2}\\.?[0-9]+"
                                                                            options:NSRegularExpressionCaseInsensitive
                                                                              error:nil];
     NSArray *matches = [regex matchesInString:rgbaColorString

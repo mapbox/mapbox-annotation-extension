@@ -74,13 +74,25 @@
 }
 
 - (void)setLineGradient:(UIColor *)lineGradient {
-    NSExpression *constantValue = [NSExpression expressionForConstantValue:lineGradient.mgl_rgbaColorString];
+    NSExpression *constantValue = [NSExpression expressionForConstantValue:lineGradient];
     self.lineStyleLayer.lineGradient = constantValue;
+}
+
+- (UIColor *)lineGradient {
+    NSExpression *constantValue = self.lineStyleLayer.lineGradient;
+    UIColor *value = [constantValue expressionValueWithObject:nil context:nil];
+    return value;
 }
 
 - (void)setLineTranslation:(CGVector)lineTranslation {
     NSExpression *constantValue = [NSExpression expressionForConstantValue:@(lineTranslation)];
     self.lineStyleLayer.lineTranslation = constantValue;
+}
+
+- (CGVector)lineTranslation {
+    NSExpression *constantValue = self.lineStyleLayer.lineTranslation;
+    NSValue *value = [constantValue expressionValueWithObject:nil context:nil];
+    return value.CGVectorValue;
 }
 
 - (void)setLineTranslationAnchor:(MGLLineTranslationAnchor)lineTranslationAnchor {

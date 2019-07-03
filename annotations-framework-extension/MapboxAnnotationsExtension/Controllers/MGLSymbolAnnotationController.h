@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat textPadding;
 @property (nonatomic, assign) MGLTextPitchAlignment textPitchAlignment;
 @property (nonatomic, assign) MGLTextRotationAlignment textRotationAlignment;
-@property (nonatomic, assign) MGLTextAnchor textVariableAnchor;
+@property (nonatomic, assign) NSArray<NSString *> *textVariableAnchor;
 @property (nonatomic, assign) CGVector iconTranslation;
 @property (nonatomic, assign) MGLIconTranslationAnchor iconTranslationAnchor;
 @property (nonatomic, assign) CGVector textTranslation;
