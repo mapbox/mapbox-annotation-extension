@@ -6,6 +6,8 @@ xcuserdata
 *.xccheckout
 *.moved-aside
 *.xcuserstate
+*.xcbuild
+*build
 *.xcscmblueprint
 Pods
 *.xcworkspace
