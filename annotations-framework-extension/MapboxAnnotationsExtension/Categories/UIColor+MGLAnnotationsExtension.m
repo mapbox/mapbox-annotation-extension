@@ -8,9 +8,9 @@
     CGFloat multiplier = 255;
 
     return [NSString stringWithFormat:@"rgba(%ld, %ld, %ld, %.1f)",
-            (NSInteger)(r*multiplier),
-            (NSInteger)(g*multiplier),
-            (NSInteger)(b*multiplier), a];
+            (long)(r*multiplier),
+            (long)(g*multiplier),
+            (long)(b*multiplier), a];
 }
 
 + (UIColor *)mgl_colorWithRgbaColorString:(NSString *)rgbaColorString {
