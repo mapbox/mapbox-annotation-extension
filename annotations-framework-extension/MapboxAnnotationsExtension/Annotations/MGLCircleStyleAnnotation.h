@@ -3,6 +3,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ An `MGLCircleStyleAnnotation` is an `MGLCircleStyleLayer` style layer annotation
+ that renders one or more filled circles on the map.
+ 
+ A circle style annotation renders circles whose radii are measured in screen units.
+ 
+ ### Example
+ 
+ ```swift
+ func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
+    let circleAnnotationController = MGLCircleAnnotationController(mapView: self.mapView)
+    let circle = MGLCircleStyleAnnotation(center: CLLocationCoordinate2D(latitude: 59.31, longitude: 18.06), radius: 3.0, color: .blue)
+    circle.opacity = 0.5
+    circleAnnotationController.add(circle)
+ }
+ ```
+ */
 @interface MGLCircleStyleAnnotation : MGLStyleAnnotation
 
 @property (nonatomic, assign) CGFloat circleRadius;

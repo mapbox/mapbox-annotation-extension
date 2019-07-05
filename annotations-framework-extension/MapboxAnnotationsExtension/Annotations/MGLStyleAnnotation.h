@@ -11,8 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) id<MGLFeature> feature;
 @property (nonatomic, readonly) NSDictionary<NSString *, id> *geoJSONDictionary;
 
--(instancetype)initWithFeature:(id<MGLFeature>)feature;
--(instancetype)initWithGeoJSON:(NSData *)data;
+//-(instancetype)initWithFeature:(id<MGLFeature>)feature;
+//-(instancetype)initWithGeoJSON:(NSData *)data;
 
 @end
 

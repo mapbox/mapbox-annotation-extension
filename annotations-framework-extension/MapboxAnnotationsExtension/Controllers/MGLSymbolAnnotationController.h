@@ -2,6 +2,36 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ An `MGLSymbolAnnotationController` is a controller that creates internally
+ instances of an `MGLShapeSource` and `MGLSymbolStyleLayer` to simplify the creation
+ of runtime styling based annotations to the map.
+ 
+ Create instances of `MGLSymbolStyleAnnotation` and pass it to this controller.
+ 
+ An image must be supplied to the [map style's sprite](https://docs.mapbox.com/help/glossary/sprite/)
+ before being able to assign it to be the icon image of a symbol.
+ 
+ ### Example
+ 
+ ```swift
+ func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
+    let attraction = UIImage(named: "attraction")
+ 
+    if let styleImage = attraction {
+        self.mapView.style?.setImage(styleImage, forName: "attraction")
+    }
+ 
+    let symbolAnnotationController = MGLSymbolAnnotationController(mapView: self.mapView)
+ 
+    let symbol = MGLSymbolStyleAnnotation(coordinate: CLLocationCoordinate2DMake(59, 18));
+    symbol.iconImageName = "attraction"
+    symbol.text = "This is a cool place!"
+    symbol.textFontSize = 16
+    symbolAnnotationController.add(symbol)
+ }
+ ```
+ */
 @interface MGLSymbolAnnotationController : MGLAnnotationController
 
 @property (nonatomic, assign) BOOL iconAllowsOverlap;
