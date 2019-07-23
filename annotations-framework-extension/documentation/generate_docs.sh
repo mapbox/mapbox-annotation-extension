@@ -5,9 +5,10 @@ set -o pipefail
 set -u
 
 echo "Generating docs..."
-
+# platform/ios/jazzy.yml
 jazzy \
-    --config jazzy.yml \
-
-# We can remove the below line once https://github.com/realm/jazzy/pull/1077 merges
-sed -i "" "s/BRANDLESS_DOCSET_TITLE/Annotations Extension/g" docs/index.html
+    --config annotations-framework-extension/documentation/jazzy.yml \
+    --output annotations-framework-extension/documentation/api-docs \
+    --readme annotations-framework-extension/README.md \
+    --title "Annotations Extension" \
+    --module-version v0.0.0-alpha.2

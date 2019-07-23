@@ -10,6 +10,23 @@ objc: Yes
 sdk: iphonesimulator
 skip_undocumented: Yes
 hide_documentation_coverage: Yes
-umbrella_header: ../annotations-framework-extension/annotations_framework_extension.h
-framework_root: ../annotations-framework-extension
+umbrella_header: ../MapboxAnnotationsExtension/MapboxAnnotationsExtension.h
+framework_root: ../MapboxAnnotationsExtension
 theme: jazzy-theme
+
+custom_categories:
+  - name: Annotation controllers
+    children:
+      - MGLAnnotationController
+      - MGLStyleAnnotationController
+      - MGLCircleAnnotationController
+      - MGLLineAnnotationController
+      - MGLPolygonAnnotationController
+      - MGLSymbolAnnotationController
+  - name: Style annotations
+    children:
+      - MGLStyleAnnotation
+      - MGLCircleStyleAnnotation
+      - MGLLineStyleAnnotation
+      - MGLPolygonStyleAnnotation
+      - MGLSymbolStyleAnnotation
