@@ -22,15 +22,14 @@ NSString *const MGLPropertyLineWidth = @"line-width";
 
 - (instancetype)initWithCoordinates:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count {
     if (self = [super init]) {
-        self.polylineFeature = [[MGLPolylineFeature alloc] init];
+        self.polylineFeature = [MGLPolylineFeature polylineWithCoordinates:coordinates count:count];
     }
 
     return self;
 }
 
 - (instancetype)initWithCoordinates:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count color:(UIColor *)color {
-    if (self = [super init]) {
-        self.polylineFeature = [MGLPolylineFeature polylineWithCoordinates:coordinates count:count];
+    if (self = [self initWithCoordinates:coordinates count:count]){
         self.lineColor = color;
     }
 
