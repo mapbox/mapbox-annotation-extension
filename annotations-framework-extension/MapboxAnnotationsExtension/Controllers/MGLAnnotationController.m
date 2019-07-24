@@ -128,17 +128,13 @@
     __block NSMutableArray *features = [NSMutableArray arrayWithCapacity:self.annotations.count];
     __weak typeof (self) weakSelf = self;
     [self.annotations enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, MGLStyleAnnotation * _Nonnull annotation, BOOL * _Nonnull stop) {
-        [features addObject:annotation.geoJSONDictionary];
+        [features addObject:annotation.feature];
         [weakSelf enablePaintProperties:annotation];
     }];
     
     [self setPaintProperties];
-    
-    NSDictionary *geoJSON = @{@"type": @"FeatureCollection",
-                              @"features": features};
-    
-    NSData * jsonData = [NSJSONSerialization  dataWithJSONObject:geoJSON options:0 error:nil];
-    MGLShape *shape = [MGLShape shapeWithData:jsonData encoding:NSUTF8StringEncoding error:NULL];
+
+    MGLShape *shape = [MGLShapeCollectionFeature shapeCollectionWithShapes:features];
     self.source.shape = shape;
     
 }
