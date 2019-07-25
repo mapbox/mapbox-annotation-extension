@@ -24,6 +24,8 @@
 		1F40B9DC22BC3164003DB389 /* MGLLineAnnotationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9DA22BC3164003DB389 /* MGLLineAnnotationController.m */; };
 		1F40B9E022BC31D6003DB389 /* MGLPolygonAnnotationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F40B9DE22BC31D6003DB389 /* MGLPolygonAnnotationController.m */; };
 		1F40B9E322BC523C003DB389 /* MGLAnnotationController_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F40B9E122BC523C003DB389 /* MGLAnnotationController_Private.h */; };
+		1FC06EDC22E9215A00B9ECAE /* MGLAnnotationLayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FC06EDA22E9215A00B9ECAE /* MGLAnnotationLayerView.h */; };
+		1FC06EDD22E9215A00B9ECAE /* MGLAnnotationLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC06EDB22E9215A00B9ECAE /* MGLAnnotationLayerView.m */; };
 		1FD771D022C7D17D00B626DC /* MGLLineStyleAnnotation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD771CE22C7D17D00B626DC /* MGLLineStyleAnnotation_Private.h */; };
 		1FD771D422C9262D00B626DC /* MGLSymbolStyleAnnotation_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD771D222C9262D00B626DC /* MGLSymbolStyleAnnotation_Private.h */; };
 		1FD771DE22CC072400B626DC /* MGLCircleStyleAnnotationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD771DD22CC072400B626DC /* MGLCircleStyleAnnotationTests.m */; };
@@ -131,6 +133,8 @@
 		1F40B9DD22BC31D6003DB389 /* MGLPolygonAnnotationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLPolygonAnnotationController.h; sourceTree = "<group>"; };
 		1F40B9DE22BC31D6003DB389 /* MGLPolygonAnnotationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLPolygonAnnotationController.m; sourceTree = "<group>"; };
 		1F40B9E122BC523C003DB389 /* MGLAnnotationController_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLAnnotationController_Private.h; sourceTree = "<group>"; };
+		1FC06EDA22E9215A00B9ECAE /* MGLAnnotationLayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLAnnotationLayerView.h; sourceTree = "<group>"; };
+		1FC06EDB22E9215A00B9ECAE /* MGLAnnotationLayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLAnnotationLayerView.m; sourceTree = "<group>"; };
 		1FD771CE22C7D17D00B626DC /* MGLLineStyleAnnotation_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLLineStyleAnnotation_Private.h; sourceTree = "<group>"; };
 		1FD771D222C9262D00B626DC /* MGLSymbolStyleAnnotation_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGLSymbolStyleAnnotation_Private.h; sourceTree = "<group>"; };
 		1FD771DD22CC072400B626DC /* MGLCircleStyleAnnotationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGLCircleStyleAnnotationTests.m; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 		07CBD7E922B8570400732884 /* MapboxAnnotationsExtension */ = {
 			isa = PBXGroup;
 			children = (
+				1FC06ED922E9212E00B9ECAE /* Views */,
 				07CBD7EA22B8570400732884 /* MapboxAnnotationsExtension.h */,
 				1F40B9CA22BC1B3C003DB389 /* Annotations */,
 				1FDAB5CF22C41EF1003D6D34 /* Categories */,
@@ -308,6 +313,15 @@
 				1FDAB57122BD5083003D6D34 /* MGLSymbolStyleAnnotation.m */,
 			);
 			path = Annotations;
+			sourceTree = "<group>";
+		};
+		1FC06ED922E9212E00B9ECAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1FC06EDA22E9215A00B9ECAE /* MGLAnnotationLayerView.h */,
+				1FC06EDB22E9215A00B9ECAE /* MGLAnnotationLayerView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		1FDAB5C422C3FAEB003D6D34 /* MapboxAnnotationsExtensionTests */ = {
@@ -395,6 +409,7 @@
 				1FDAB5D822C440D0003D6D34 /* MGLEnums+MGLAnnotationsExtension.h in Headers */,
 				1FD771D022C7D17D00B626DC /* MGLLineStyleAnnotation_Private.h in Headers */,
 				1FDAB57222BD5083003D6D34 /* MGLSymbolStyleAnnotation.h in Headers */,
+				1FC06EDC22E9215A00B9ECAE /* MGLAnnotationLayerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +705,7 @@
 			files = (
 				1FDAB57322BD5083003D6D34 /* MGLSymbolStyleAnnotation.m in Sources */,
 				1FDAB56F22BD5065003D6D34 /* MGLPolygonStyleAnnotation.m in Sources */,
+				1FC06EDD22E9215A00B9ECAE /* MGLAnnotationLayerView.m in Sources */,
 				1FDAB5D322C4245B003D6D34 /* UIColor+MGLAnnotationsExtension.m in Sources */,
 				1F40B9D422BC3136003DB389 /* MGLCircleAnnotationController.m in Sources */,
 				1F40B9E022BC31D6003DB389 /* MGLPolygonAnnotationController.m in Sources */,
