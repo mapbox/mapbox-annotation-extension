@@ -38,8 +38,9 @@ extension ViewController : MGLMapViewDelegate {
         let circleAnnotation5 = MGLCircleStyleAnnotation(center: CLLocationCoordinate2D(latitude: 59.27, longitude: 18.02), radius: 7.0, color: .green)
         circleAnnotation5.title = "circleAnnotation5";
         
-        circleAnnotationController.add([circleAnnotation1, circleAnnotation2, circleAnnotation3, circleAnnotation4, circleAnnotation5])
+        circleAnnotationController.addStyleAnnotations([circleAnnotation1, circleAnnotation2, circleAnnotation3, circleAnnotation4, circleAnnotation5])
         circleAnnotationController.circleTranslationAnchor = .map;
+        circleAnnotationController.delegate = self
         
         let coordinates = [
             CLLocationCoordinate2D(latitude: 59.31, longitude: 18.06),
@@ -49,7 +50,7 @@ extension ViewController : MGLMapViewDelegate {
         lineAnnotationController.lineCap = .round
         let lineAnnotation1 = MGLLineStyleAnnotation(coordinates: coordinates, count: UInt(coordinates.count), color: .purple)
         lineAnnotation1.lineWidth = 5
-        lineAnnotationController.add([lineAnnotation1])
+        lineAnnotationController.addStyleAnnotations([lineAnnotation1])
         
         let attraction = UIImage(named: "attraction")
         
@@ -75,7 +76,7 @@ extension ViewController : MGLMapViewDelegate {
         symbolAnnotation1.textAnchor = .left
         
         symbolAnnotationController.textTranslation = CGVector(dx: 10, dy: 0)
-        symbolAnnotationController.add(symbolAnnotation1)
+        symbolAnnotationController.addStyleAnnotation(symbolAnnotation1)
         
         let polygonAnnotationController = MGLPolygonAnnotationController(mapView: self.mapView)
         
@@ -92,7 +93,7 @@ extension ViewController : MGLMapViewDelegate {
         polygonAnnotation.fillColor = .green
         polygonAnnotation.fillOpacity = 0.5
         
-        polygonAnnotationController.add(polygonAnnotation)
+        polygonAnnotationController.addStyleAnnotation(polygonAnnotation)
     }
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
@@ -105,3 +106,12 @@ extension ViewController : MGLMapViewDelegate {
     
 }
 
+extension ViewController: MGLAnnotationControllerDelegate {
+    func annotationController(_ annotationController: MGLAnnotationController, didSelect styleAnnotation: MGLStyleAnnotation) {
+        print("Selected:\(styleAnnotation)")
+    }
+    
+    func annotationController(_ annotationController: MGLAnnotationController, didDeselect styleAnnotation: MGLStyleAnnotation) {
+        print("Deselected:\(styleAnnotation)")
+    }
+}

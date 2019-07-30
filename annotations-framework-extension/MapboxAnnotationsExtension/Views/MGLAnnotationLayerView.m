@@ -29,6 +29,9 @@
     CGRect positionRect = CGRectInset(pointRect, -22.0, -22.0);
     self.features = [self.annotationController.mapView visibleFeaturesInRect:positionRect
                                                     inStyleLayersWithIdentifiers:[NSSet setWithArray:@[self.annotationController.layer.identifier]]];
+    if (!self.features.count && self.selectedFeature) {
+        [self removeAnnotationFromMapView:self.selectedFeature];
+    }
     
     return self.features.count ? YES : NO;
 }
@@ -90,6 +93,11 @@
     }
     
     self.selectedFeature = feature;
+    NSString *identifier = feature.attributes[MGLPropertyAnnotationIdentifier];
+    MGLStyleAnnotation *styleAnnotation = self.annotationController.annotations[identifier];
+    if ([self.annotationController.delegate respondsToSelector:@selector(annotationController:didSelectStyleAnnotation:)]) {
+        [self.annotationController.delegate annotationController:self.annotationController didSelectStyleAnnotation:styleAnnotation];
+    }
     [self.annotationController.mapView selectAnnotation:feature animated:YES];
 }
 
@@ -97,9 +105,16 @@
     if (!featureAnnotation) {
         return;
     }
+    
+    self.selectedFeature = nil;
+    NSString *identifier = featureAnnotation.attributes[MGLPropertyAnnotationIdentifier];
+    MGLStyleAnnotation *styleAnnotation = self.annotationController.annotations[identifier];
+    if ([self.annotationController.delegate respondsToSelector:@selector(annotationController:didDeselectStyleAnnotation:)]) {
+        [self.annotationController.delegate annotationController:self.annotationController didDeselectStyleAnnotation:styleAnnotation];
+    }
     [self.annotationController.mapView deselectAnnotation:featureAnnotation animated:YES];
     [self.annotationController.mapView removeAnnotation:featureAnnotation];
-    self.selectedFeature = nil;
+    
 }
 
 @end

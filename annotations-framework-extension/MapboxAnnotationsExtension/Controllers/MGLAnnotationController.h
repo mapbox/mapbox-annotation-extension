@@ -40,6 +40,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MGLAnnotationController : NSObject
 
+/**
+ A boolean indicating whether style annotations belonging to the controller should support
+ callouts when the user taps on them.
+ */
+@property (nonatomic, assign) BOOL annotationsInteractionEnabled;
+
+/**
+ The `MGLMapView` associated with the style annotation controller.
+ */
+@property (nonatomic, strong) MGLMapView *mapView;
+
+/**
+ The receiver's delegate.
+ 
+ An annotation controller sends messages to its delegate to notify when a style annotation
+ is selected/deselected.
+ */
+@property (nonatomic, weak, nullable) id<MGLAnnotationControllerDelegate> delegate;
 
 # pragma mark Initializing style annotation controllers
 /**
@@ -116,16 +134,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setNeedsUpdate;
 
 /**
- A boolean indicating whether style annotations belonging to the controller should support
- callouts when the user taps on them.
+ Returns the style annotations added to the controller.
+ 
+ Objects returned may not be in the same order as they were added.
  */
-@property (nonatomic, assign) BOOL annotationsInteractionEnabled;
-
-/**
- The `MGLMapView` associated with the style annotation controller.
- */
-@property (nonatomic, strong) MGLMapView *mapView;
-
+- (NSArray<MGLStyleAnnotation*> *)styleAnnotations;
 
 @end
 

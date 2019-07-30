@@ -129,6 +129,10 @@
     
 }
 
+- (NSArray<MGLStyleAnnotation *> *)styleAnnotations {
+    return self.annotations.allValues;
+}
+
 - (void)dealloc {
     [self.annotationLayerView removeFromSuperview];
 }
