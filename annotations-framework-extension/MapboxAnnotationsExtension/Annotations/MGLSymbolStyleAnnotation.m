@@ -155,7 +155,7 @@ NSString *const  MGLPropertySymbolSortKey = @"symbol-sort-key";
         NSString *value = self.attributes[MGLPropertyIconHaloColor];
         return [UIColor mgl_colorWithRgbaColorString:value];
     }
-    return UIColor.blackColor;
+    return UIColor.clearColor;
 }
 
 - (void)setIconHaloWidth:(CGFloat)iconHaloWidth {
@@ -335,7 +335,7 @@ NSString *const  MGLPropertySymbolSortKey = @"symbol-sort-key";
         NSString *value = self.attributes[MGLPropertyTextHaloColor];
         return [UIColor mgl_colorWithRgbaColorString:value];
     }
-    return [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    return [UIColor clearColor];
 }
 
 - (void)setTextHaloWidth:(CGFloat)textHaloWidth {

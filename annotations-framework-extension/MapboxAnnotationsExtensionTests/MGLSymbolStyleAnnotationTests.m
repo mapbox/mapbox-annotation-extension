@@ -63,7 +63,7 @@
     }
     // icon-halo-color
     {
-        XCTAssertTrue(CGColorEqualToColor(UIColor.blackColor.CGColor, annotation.iconHaloColor.CGColor));
+        XCTAssertTrue(CGColorEqualToColor(UIColor.clearColor.CGColor, annotation.iconHaloColor.CGColor));
         annotation.iconHaloColor = UIColor.blueColor;
         XCTAssertTrue(CGColorEqualToColor(UIColor.blueColor.CGColor, annotation.iconHaloColor.CGColor));
         XCTAssertNotNil(annotation.attributes[MGLPropertyIconHaloColor]);
@@ -179,7 +179,7 @@
     // text-halo-color
     {
         
-        XCTAssertTrue(CGColorEqualToColor([UIColor colorWithRed:0 green:0 blue:0 alpha:0].CGColor, annotation.textHaloColor.CGColor));
+        XCTAssertTrue(CGColorEqualToColor([UIColor clearColor].CGColor, annotation.textHaloColor.CGColor));
         annotation.textHaloColor = UIColor.blueColor;
         XCTAssertTrue(CGColorEqualToColor(UIColor.blueColor.CGColor, annotation.textHaloColor.CGColor));
         XCTAssertNotNil(annotation.attributes[MGLPropertyTextHaloColor]);

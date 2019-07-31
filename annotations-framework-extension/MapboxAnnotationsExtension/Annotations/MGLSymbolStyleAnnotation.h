@@ -157,7 +157,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  An optional value representing the color of the halo or "outline" around a symbol annotation's icon image.
- Requires `iconImageName`. Defaults to black.
+ Requires `iconImageName`. Defaults to a clear color.
  
  This property corresponds to the `icon-halo-blur` property in the style [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-symbol-icon-halo-color).
  */
@@ -287,7 +287,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  An optional value representing the color of the halo or "outline" around a symbol style 
- annotation's text. Requires `text`. Defaults to black.
+ annotation's text. Requires `text`. Defaults to a clear color.
  
  This property corresponds to the `text-halo-blur` property in the style [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-symbol-text-halo-color).
  */
