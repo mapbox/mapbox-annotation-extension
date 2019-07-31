@@ -99,7 +99,7 @@
     }
 
     if (self.enabledPaintProperties[MGLPropertyPolygonPattern]) {
-        self.fillStyleLayer.fillPattern = [NSExpression expressionForConstantValue:MGLPropertyPolygonPattern];
+        self.fillStyleLayer.fillPattern = [NSExpression expressionForKeyPath:MGLPropertyPolygonPattern];
     }
 }
 
