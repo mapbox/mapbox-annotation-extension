@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @protocol MGLAnnotationControllerDelegate <NSObject>
 
+@optional
+
 /**
  Called after the user has tapped and selected a style annotation.
  
