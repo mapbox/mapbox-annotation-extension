@@ -53,6 +53,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithCenter:(CLLocationCoordinate2D)center radius:(CGFloat)radius color:(UIColor *)color;
 
 /**
+ The center of the circle style annotation.
+ */
+@property (nonatomic, assign) CLLocationCoordinate2D center;
+
+/**
  The radius of the circle style annotation, measured in screen points. Defaults to `5`.
  
  This property corresponds to the `circle-radius` property in the [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-circle-circle-radius).

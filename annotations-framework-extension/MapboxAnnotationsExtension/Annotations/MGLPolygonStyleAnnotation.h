@@ -61,13 +61,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithCoordinates:(const CLLocationCoordinate2D *)coordinates count:(NSUInteger)count interiorPolygons:(NSArray<MGLPolygonFeature *> *)interiorPolygons;
 
 /**
- If the polygon style annotation is initialized with `[MGLPolygonStyleAnnotation initWithCoordinates:coordinates:interiorPolygons:]`,
- this property returns an array of `MGLPolygonFeature`s that represent any holes the 
- polygon contains. Otherwise, this property returns `nil`.
- */
-@property (nonatomic, strong) NSArray<MGLPolygonFeature *> *interiorPolygons;
-
-/**
  The fill color of the polygon style annotation. Defaults to black.
  
  This property corresponds to the `fill-color` property in the style [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-fill-fill-color).

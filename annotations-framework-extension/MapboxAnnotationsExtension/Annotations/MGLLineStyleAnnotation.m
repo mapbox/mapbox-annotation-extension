@@ -144,4 +144,19 @@ NSString *const MGLPropertyLineWidth = @"line-width";
     return self.polylineFeature;
 }
 
+- (instancetype)updateGeometryCoordinatesWithDelta:(CGVector)delta {
+    CLLocationCoordinate2D *coordinates = self.polylineFeature.coordinates;
+    NSUInteger count = self.polylineFeature.pointCount;
+    CLLocationCoordinate2D *shiftedCoordinates = calloc(sizeof(CLLocationCoordinate2D), count);
+    
+    for (NSUInteger index = 0; index < count; index++) {
+        CLLocationCoordinate2D currentCoordinate = coordinates[index];
+        shiftedCoordinates[index] = CLLocationCoordinate2DMake(currentCoordinate.latitude + delta.dy, currentCoordinate.longitude + delta.dx);
+    }
+    
+    [self.polylineFeature setCoordinates:shiftedCoordinates count:count];
+    free(shiftedCoordinates);
+    return self;
+}
+
 @end

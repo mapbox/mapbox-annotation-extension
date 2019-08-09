@@ -11,6 +11,8 @@ FOUNDATION_EXPORT NSString *const MGLPropertyAnnotationTooltip;
 
 @property (nonatomic, strong) NSMutableDictionary<NSString *, id> *attributes;
 
+- (instancetype)updateGeometryCoordinatesWithDelta:(CGVector)delta;
+
 @end
 
 NS_ASSUME_NONNULL_END

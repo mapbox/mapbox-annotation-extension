@@ -5,6 +5,9 @@ import MapboxAnnotationsExtension
 class ViewController: UIViewController {
     var mapView: MGLMapView!
     var circleAnnotationController: MGLCircleAnnotationController!
+    var lineAnnotationController: MGLLineAnnotationController!
+    var polygonAnnotationController: MGLPolygonAnnotationController!
+    var symbolAnnotationController: MGLSymbolAnnotationController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +34,14 @@ extension ViewController : MGLMapViewDelegate {
         
         let circleAnnotation3 = MGLCircleStyleAnnotation(center: CLLocationCoordinate2D(latitude: 59.29, longitude: 18.04), radius: 5.0, color: .red)
         circleAnnotation3.title = "circleAnnotation3";
+        circleAnnotation3.isDraggable = true
         
         let circleAnnotation4 = MGLCircleStyleAnnotation(center: CLLocationCoordinate2D(latitude: 59.28, longitude: 18.03), radius: 6.0, color: .orange)
         circleAnnotation4.title = "circleAnnotation4";
         
         let circleAnnotation5 = MGLCircleStyleAnnotation(center: CLLocationCoordinate2D(latitude: 59.27, longitude: 18.02), radius: 7.0, color: .green)
         circleAnnotation5.title = "circleAnnotation5";
+        circleAnnotation5.isDraggable = true
         
         circleAnnotationController.addStyleAnnotations([circleAnnotation1, circleAnnotation2, circleAnnotation3, circleAnnotation4, circleAnnotation5])
         circleAnnotationController.circleTranslationAnchor = .map;
@@ -46,10 +51,11 @@ extension ViewController : MGLMapViewDelegate {
             CLLocationCoordinate2D(latitude: 59.31, longitude: 18.06),
             CLLocationCoordinate2D(latitude: 59.30, longitude: 18.05)
         ]
-        let lineAnnotationController = MGLLineAnnotationController(mapView: mapView)
+        lineAnnotationController = MGLLineAnnotationController(mapView: mapView)
         lineAnnotationController.lineCap = .round
         let lineAnnotation1 = MGLLineStyleAnnotation(coordinates: coordinates, count: UInt(coordinates.count), color: .purple)
         lineAnnotation1.lineWidth = 5
+        lineAnnotation1.isDraggable = true
         lineAnnotationController.addStyleAnnotations([lineAnnotation1])
         
         let attraction = UIImage(named: "attraction")
@@ -58,7 +64,7 @@ extension ViewController : MGLMapViewDelegate {
             self.mapView.style?.setImage(styleImage, forName: "attraction")
         }
 
-        let symbolAnnotationController = MGLSymbolAnnotationController(mapView: self.mapView)
+        symbolAnnotationController = MGLSymbolAnnotationController(mapView: self.mapView)
         
         let symbolAnnotation1 = MGLSymbolStyleAnnotation(coordinate: CLLocationCoordinate2DMake(59.29, 18.06));
         symbolAnnotation1.iconImageName = "attraction"
@@ -74,11 +80,12 @@ extension ViewController : MGLMapViewDelegate {
         symbolAnnotation1.textHaloWidth = symbolAnnotation1.iconHaloWidth
         symbolAnnotation1.textJustification = .left
         symbolAnnotation1.textAnchor = .left
+        symbolAnnotation1.isDraggable = true
         
         symbolAnnotationController.textTranslation = CGVector(dx: 10, dy: 0)
         symbolAnnotationController.addStyleAnnotation(symbolAnnotation1)
         
-        let polygonAnnotationController = MGLPolygonAnnotationController(mapView: self.mapView)
+        polygonAnnotationController = MGLPolygonAnnotationController(mapView: self.mapView)
         
         let polygonCoordinates = [
             CLLocationCoordinate2DMake(59.35, 18.06),
@@ -92,8 +99,27 @@ extension ViewController : MGLMapViewDelegate {
         polygonAnnotation.fillOutlineColor = .red
         polygonAnnotation.fillColor = .green
         polygonAnnotation.fillOpacity = 0.5
+        polygonAnnotation.isDraggable = true
         
-        polygonAnnotationController.addStyleAnnotation(polygonAnnotation)
+        let innerCoordinates = [
+            CLLocationCoordinate2DMake(-5, -5),
+            CLLocationCoordinate2DMake(-5, 5),
+            CLLocationCoordinate2DMake(5, 5),
+            CLLocationCoordinate2DMake(5, -5),
+        ]
+        let innerPolygon = MGLPolygonFeature(coordinates: innerCoordinates, count: UInt(innerCoordinates.count))
+        
+        let outerCoordinates = [
+            CLLocationCoordinate2DMake(-10, -10),
+            CLLocationCoordinate2DMake(-10, 10),
+            CLLocationCoordinate2DMake(10, 10),
+            CLLocationCoordinate2DMake(10, -10),
+        ]
+        let polygonAnnotation2 = MGLPolygonStyleAnnotation(coordinates: outerCoordinates, count: UInt(outerCoordinates.count), interiorPolygons: [innerPolygon])
+        polygonAnnotation2.fillColor = UIColor.purple
+        polygonAnnotation2.isDraggable = true
+        
+        polygonAnnotationController.addStyleAnnotations([polygonAnnotation, polygonAnnotation2])
     }
     
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {

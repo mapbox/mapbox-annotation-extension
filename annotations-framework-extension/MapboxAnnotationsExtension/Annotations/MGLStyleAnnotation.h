@@ -42,6 +42,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, readonly) NSDictionary<NSString *, id> *geoJSONDictionary;
 
+/**
+ A Boolean value indicating whether the annotation view is draggable.
+ 
+ If this property is set to `YES`, the user can drag the annotation after
+ pressing and holding the view. The default value of this property is
+ `NO`.
+ */
+@property (nonatomic, assign, getter=isDraggable) BOOL draggable;
+
 //-(instancetype)initWithFeature:(id<MGLFeature>)feature;
 //-(instancetype)initWithGeoJSON:(NSData *)data;
 

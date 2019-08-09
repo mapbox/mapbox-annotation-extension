@@ -391,4 +391,10 @@ NSString *const  MGLPropertySymbolSortKey = @"symbol-sort-key";
     return self.pointFeature;
 }
 
+- (instancetype)updateGeometryCoordinatesWithDelta:(CGVector)delta {
+    CLLocationCoordinate2D center = self.pointFeature.coordinate;
+    self.pointFeature.coordinate = CLLocationCoordinate2DMake(center.latitude + delta.dy, center.longitude + delta.dx);
+    return self;
+}
+
 @end

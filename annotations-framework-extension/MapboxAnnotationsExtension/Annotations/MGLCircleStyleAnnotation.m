@@ -40,6 +40,14 @@ NSString *const MGLPropertyCircleStrokeOpacity = @"circle-stroke-opacity";
     return self;
 }
 
+- (void)setCenter:(CLLocationCoordinate2D)center {
+    self.pointFeature.coordinate = center;
+}
+
+- (CLLocationCoordinate2D)center {
+    return self.pointFeature.coordinate;
+}
+
 - (void)setCircleRadius:(CGFloat)circleRadius {
     self.attributes[MGLPropertyCircleRadius] = @(circleRadius);
 }
@@ -129,6 +137,12 @@ NSString *const MGLPropertyCircleStrokeOpacity = @"circle-stroke-opacity";
 - (id<MGLFeature>)feature {
     self.pointFeature.attributes = self.attributes;
     return self.pointFeature;
+}
+
+- (instancetype)updateGeometryCoordinatesWithDelta:(CGVector)delta {
+    CLLocationCoordinate2D center = self.center;
+    self.center = CLLocationCoordinate2DMake(center.latitude + delta.dy, center.longitude + delta.dx);
+    return self;
 }
 
 @end
