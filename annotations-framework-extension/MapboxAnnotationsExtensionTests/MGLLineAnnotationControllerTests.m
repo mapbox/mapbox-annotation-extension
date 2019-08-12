@@ -1,10 +1,12 @@
 #import <XCTest/XCTest.h>
 #import "MGLLineAnnotationController.h"
+#import "MGLLineStyleAnnotation.h"
 
 @interface MGLLineAnnotationControllerTests : XCTestCase <MGLMapViewDelegate>
 
 @property (nonatomic) MGLMapView *mapView;
 @property (nonatomic) MGLLineAnnotationController *annotationController;
+@property (nonatomic) MGLLineStyleAnnotation *lineAnnotation;
 
 @end
 
@@ -30,6 +32,12 @@
     XCTAssertEqual(mapView.style, style);
     self.mapView = mapView;
     self.annotationController = [[MGLLineAnnotationController alloc] initWithMapView:mapView];
+    CLLocationCoordinate2D lineCoordinates[] = {
+        CLLocationCoordinate2DMake(50, 50),
+        CLLocationCoordinate2DMake(52, 52)
+    };
+    NSUInteger count = sizeof(lineCoordinates) / sizeof(CLLocationCoordinate2D);
+    self.lineAnnotation = [[MGLLineStyleAnnotation alloc] initWithCoordinates:lineCoordinates count:count];
     [_styleLoadingExpectation fulfill];
 }
 
@@ -79,6 +87,19 @@
         self.annotationController.lineTranslationAnchor = MGLLineTranslationAnchorViewport;
         XCTAssertEqual(MGLLineTranslationAnchorViewport, self.annotationController.lineTranslationAnchor);
     }
+}
+
+- (void)testAddingLineStyleAnnotation {
+    [self.annotationController addStyleAnnotation:self.lineAnnotation];
+    XCTAssertEqual(1, self.annotationController.styleAnnotations.count);
+}
+
+- (void)testProgrammaticSelection {
+    [self.annotationController selectStyleAnnotation:self.lineAnnotation];
+    XCTAssertEqual(1, self.mapView.selectedAnnotations.count);
+    
+    [self.annotationController deselectStyleAnnotation:self.lineAnnotation];
+    XCTAssertEqual(0, self.mapView.selectedAnnotations.count);
 }
 
 @end

@@ -129,6 +129,20 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)updateStyleAnnotations:(NSArray <MGLStyleAnnotation *> *)styleAnnotations;
 
 /**
+ Selects the style annotation programmatically.
+ 
+ @param styleAnnotation The `MGLStyleAnnotation` to be selected.
+ */
+- (void)selectStyleAnnotation:(MGLStyleAnnotation *)styleAnnotation;
+
+/**
+ Deselects the style annotation programmatically.
+ 
+ @param styleAnnotation The `MGLStyleAnnotation` to be deselected.
+ */
+- (void)deselectStyleAnnotation:(MGLStyleAnnotation *)styleAnnotation;
+
+/**
  :nodoc:
  An internal method to update the coordinates and paint properties of annotations within
  a style annotation controller.
