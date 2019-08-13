@@ -1,6 +1,6 @@
 #import "MGLAnnotationLayerView.h"
 #import "MGLAnnotationController_Private.h"
-#import "MGLCircleStyleAnnotation_Private.h"
+#import "MGLStyleAnnotation_Private.h"
 
 @interface MGLAnnotationLayerView()<UIGestureRecognizerDelegate>
 

@@ -74,6 +74,8 @@
     [self.annotationController selectStyleAnnotation:self.polygonAnnotation];
     XCTAssertEqual(1, self.mapView.selectedAnnotations.count);
     
+    XCTAssertTrue([self.mapView.selectedAnnotations containsObject:self.polygonAnnotation.feature]);
+    
     [self.annotationController deselectStyleAnnotation:self.polygonAnnotation];
     XCTAssertEqual(0, self.mapView.selectedAnnotations.count);
 }

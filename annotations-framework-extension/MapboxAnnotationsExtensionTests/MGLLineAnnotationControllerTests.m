@@ -98,6 +98,8 @@
     [self.annotationController selectStyleAnnotation:self.lineAnnotation];
     XCTAssertEqual(1, self.mapView.selectedAnnotations.count);
     
+    XCTAssertTrue([self.mapView.selectedAnnotations containsObject:self.lineAnnotation.feature]);
+    
     [self.annotationController deselectStyleAnnotation:self.lineAnnotation];
     XCTAssertEqual(0, self.mapView.selectedAnnotations.count);
 }

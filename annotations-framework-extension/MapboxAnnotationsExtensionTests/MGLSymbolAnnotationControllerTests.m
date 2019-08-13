@@ -211,6 +211,8 @@
     [self.annotationController selectStyleAnnotation:self.symbolAnnotation];
     XCTAssertEqual(1, self.mapView.selectedAnnotations.count);
     
+    XCTAssertTrue([self.mapView.selectedAnnotations containsObject:self.symbolAnnotation.feature]);
+    
     [self.annotationController deselectStyleAnnotation:self.symbolAnnotation];
     XCTAssertEqual(0, self.mapView.selectedAnnotations.count);
 }

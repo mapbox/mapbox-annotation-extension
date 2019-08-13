@@ -74,6 +74,8 @@
     [self.annotationController selectStyleAnnotation:self.circleAnnotation];
     XCTAssertEqual(1, self.mapView.selectedAnnotations.count);
     
+    XCTAssertTrue([self.mapView.selectedAnnotations containsObject:self.circleAnnotation.feature]);
+    
     [self.annotationController deselectStyleAnnotation:self.circleAnnotation];
     XCTAssertEqual(0, self.mapView.selectedAnnotations.count);
 }
