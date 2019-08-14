@@ -1,10 +1,12 @@
 #import <XCTest/XCTest.h>
 #import "MGLCircleAnnotationController.h"
+#import "MGLCircleStyleAnnotation.h"
 
 @interface MGLCircleAnnotationControllerTests : XCTestCase <MGLMapViewDelegate>
 
 @property (nonatomic) MGLMapView *mapView;
 @property (nonatomic) MGLCircleAnnotationController *annotationController;
+@property (nonatomic) MGLCircleStyleAnnotation *circleAnnotation;
 
 @end
 
@@ -30,6 +32,7 @@
     XCTAssertEqual(mapView.style, style);
     self.mapView = mapView;
     self.annotationController = [[MGLCircleAnnotationController alloc] initWithMapView:mapView];
+    self.circleAnnotation = [[MGLCircleStyleAnnotation alloc] initWithCenter:mapView.centerCoordinate];
     [_styleLoadingExpectation fulfill];
 }
 
@@ -60,6 +63,21 @@
         self.annotationController.circleScaleAlignment = MGLCircleScaleAlignmentViewport;
         XCTAssertEqual(MGLCircleScaleAlignmentViewport, self.annotationController.circleScaleAlignment);
     }
+}
+
+- (void)testAddingCircleStyleAnnotation {
+    [self.annotationController addStyleAnnotation:self.circleAnnotation];
+    XCTAssertEqual(1, self.annotationController.styleAnnotations.count);
+}
+
+- (void)testProgrammaticSelection {
+    [self.annotationController selectStyleAnnotation:self.circleAnnotation];
+    XCTAssertEqual(1, self.mapView.selectedAnnotations.count);
+    
+    XCTAssertTrue([self.mapView.selectedAnnotations containsObject:self.circleAnnotation.feature]);
+    
+    [self.annotationController deselectStyleAnnotation:self.circleAnnotation];
+    XCTAssertEqual(0, self.mapView.selectedAnnotations.count);
 }
 
 @end

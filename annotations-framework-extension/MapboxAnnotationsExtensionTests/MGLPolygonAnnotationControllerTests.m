@@ -1,10 +1,12 @@
 #import <XCTest/XCTest.h>
 #import "MGLPolygonAnnotationController.h"
+#import "MGLPolygonStyleAnnotation.h"
 
 @interface MGLPolygonAnnotationControllerTests : XCTestCase <MGLMapViewDelegate>
 
 @property (nonatomic) MGLMapView *mapView;
 @property (nonatomic) MGLPolygonAnnotationController *annotationController;
+@property (nonatomic) MGLPolygonStyleAnnotation *polygonAnnotation;
 
 @end
 
@@ -30,6 +32,13 @@
     XCTAssertEqual(mapView.style, style);
     self.mapView = mapView;
     self.annotationController = [[MGLPolygonAnnotationController alloc] initWithMapView:mapView];
+    CLLocationCoordinate2D polygonCoordinates[] = {
+        CLLocationCoordinate2DMake(50, 50),
+        CLLocationCoordinate2DMake(52, 52),
+        CLLocationCoordinate2DMake(50, 50)
+    };
+    NSUInteger count = sizeof(polygonCoordinates) / sizeof(CLLocationCoordinate2D);
+    self.polygonAnnotation = [[MGLPolygonStyleAnnotation alloc] initWithCoordinates:polygonCoordinates count:count];
     [_styleLoadingExpectation fulfill];
 }
 
@@ -54,7 +63,21 @@
         self.annotationController.fillTranslationAnchor = MGLFillTranslationAnchorViewport;
         XCTAssertEqual(MGLFillTranslationAnchorViewport, self.annotationController.fillTranslationAnchor);
     }
+}
+
+- (void)testAddingPolygonStyleAnnotation {
+    [self.annotationController addStyleAnnotation:self.polygonAnnotation];
+    XCTAssertEqual(1, self.annotationController.styleAnnotations.count);
+}
+
+- (void)testProgrammaticSelection {
+    [self.annotationController selectStyleAnnotation:self.polygonAnnotation];
+    XCTAssertEqual(1, self.mapView.selectedAnnotations.count);
     
+    XCTAssertTrue([self.mapView.selectedAnnotations containsObject:self.polygonAnnotation.feature]);
+    
+    [self.annotationController deselectStyleAnnotation:self.polygonAnnotation];
+    XCTAssertEqual(0, self.mapView.selectedAnnotations.count);
 }
 
 @end

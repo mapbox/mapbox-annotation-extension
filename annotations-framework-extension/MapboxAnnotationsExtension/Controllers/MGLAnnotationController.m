@@ -106,6 +106,15 @@
     [self addStyleAnnotations:styleAnnotations];
 }
 
+
+- (void)selectStyleAnnotation:(MGLStyleAnnotation *)styleAnnotation {
+    [self.annotationLayerView selectAnnotation:styleAnnotation.feature];
+}
+
+- (void)deselectStyleAnnotation:(MGLStyleAnnotation *)styleAnnotation {
+    [self.annotationLayerView deselectAnnotation:styleAnnotation.feature];
+}
+
 - (void)enablePaintProperties:(MGLStyleAnnotation *)styleAnnotation {
     // This method should be overrided by subclasses.
 }

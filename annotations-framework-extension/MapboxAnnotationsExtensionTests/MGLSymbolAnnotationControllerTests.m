@@ -1,10 +1,12 @@
 #import <XCTest/XCTest.h>
 #import "MGLSymbolAnnotationController.h"
+#import "MGLSymbolStyleAnnotation.h"
 
 @interface MGLSymbolAnnotationControllerTests : XCTestCase <MGLMapViewDelegate>
 
 @property (nonatomic) MGLMapView *mapView;
 @property (nonatomic) MGLSymbolAnnotationController *annotationController;
+@property (nonatomic) MGLSymbolStyleAnnotation *symbolAnnotation;
 
 @end
 
@@ -30,6 +32,7 @@
     XCTAssertEqual(mapView.style, style);
     self.mapView = mapView;
     self.annotationController = [[MGLSymbolAnnotationController alloc] initWithMapView:mapView];
+    self.symbolAnnotation = [[MGLSymbolStyleAnnotation alloc]initWithCoordinate:mapView.centerCoordinate];
     [_styleLoadingExpectation fulfill];
 }
 
@@ -197,6 +200,21 @@
         self.annotationController.textTranslationAnchor = MGLTextTranslationAnchorViewport;
         XCTAssertEqual(MGLTextTranslationAnchorViewport, self.annotationController.textTranslationAnchor);
     }
+}
+
+- (void)testAddingLineStyleAnnotation {
+    [self.annotationController addStyleAnnotation:self.symbolAnnotation];
+    XCTAssertEqual(1, self.annotationController.styleAnnotations.count);
+}
+
+- (void)testProgrammaticSelection {
+    [self.annotationController selectStyleAnnotation:self.symbolAnnotation];
+    XCTAssertEqual(1, self.mapView.selectedAnnotations.count);
+    
+    XCTAssertTrue([self.mapView.selectedAnnotations containsObject:self.symbolAnnotation.feature]);
+    
+    [self.annotationController deselectStyleAnnotation:self.symbolAnnotation];
+    XCTAssertEqual(0, self.mapView.selectedAnnotations.count);
 }
 
 @end
