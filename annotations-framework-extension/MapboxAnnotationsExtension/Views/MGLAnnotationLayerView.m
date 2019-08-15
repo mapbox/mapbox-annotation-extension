@@ -182,6 +182,12 @@
         return;
     }
     
+    // Annotations obtained throught querying mapView features return a different
+    // instance. This checks if the instance are different but has same ID
+    // if so then it should remove the current selectedFeature.
+    if ([self feature:self.selectedFeature isEqualToFeature:annotation]) {
+        annotation = self.selectedFeature;
+    }
     self.selectedFeature = nil;
     
     [self notifyDelegateDeselectEvent:annotation];
@@ -226,6 +232,7 @@
         ((MGLPolygonFeature*)annotation).subtitle = annotation.attributes[MGLPropertyAnnotationSubtitle];
         
     }
+    
     [self.annotationController.mapView selectAnnotation:annotation animated:YES];
 }
 
