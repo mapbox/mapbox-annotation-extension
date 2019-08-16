@@ -1,38 +1,22 @@
-# Mapbox Annotation Framework Extension for iOS
+# Mapbox Annotation Extension for iOS
 
-The Mapbox Annotation Framework Extension is lightweight library you can use with the Mapbox Maps SDK to quickly add basic shapes to a map.
+The Mapbox Annotation Extension is lightweight library you can use with the Mapbox Maps SDK to quickly add basic shapes to a map.
 
 ⚠️ This product is currently in active alpha development, and is not suitable for production usage. ⚠️
 
 ## Installation
 
-### Using CocoaPods
+### Download and unzip the latest release
 
-To install using [CocoaPods](https://cocoapods.org/):
+Reach out to us to get a copy of the binaries [through our contact page](https://support.mapbox.com/).
 
-1. Create a [Podfile](https://guides.cocoapods.org/syntax/podfile.html) with the following specification:
-   ```ruby
-   pod 'MapboxAnnotationsExtension', '0.0.1-alpha.1'
-   ```
+### Embed the framework in your project
 
-1. Run `pod repo update && pod install` and open the resulting Xcode workspace.
-
-### Using Carthage
-
-Alternatively, to install using [Carthage](https://github.com/Carthage/Carthage/):
-
-1. Create a [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#github-repositories) with the following dependency:
-   ```cartfile
-   github "mapbox/map-extensions-ios" ~> 0.0.1
-   ```
-
-1. Run `carthage update --platform iOS` to build just the iOS dependencies.
-
-1. Follow the rest of [Carthage’s iOS integration instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos). Your application target’s Embedded Frameworks should include `MapboxAnnotationsExtension.framework`.
+Drag **MapboxAnnotationExtension.framework** into your project's Embedded Binaries section in the project editor. In the sheet that appears, make sure "Copy items if needed" is checked, then select Finish.
 
 ## Usage
 
-The Mapbox Annotation Framework Extension supports the addition of circles, lines, polygons, and symbols. Each shape type has its own corresponding controller which manages the addition of multiple shape objects of the same type.
+The Mapbox Annotation Extension supports the addition of circles, lines, polygons, and symbols. Each shape type has its own corresponding controller which manages the addition of multiple shape objects of the same type.
 
 Since the map needs to be finished loading before adding shapes to it, all shapes should be added within the [`MGLMapView:didFinishLoadingStyle:`](https://docs.mapbox.com/ios/api/maps/) delegate method.
 
@@ -111,15 +95,16 @@ func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
 
 Style annotations support callouts that appear when the annotation is selected. Each callout can display additional information about its annotation.
 
-1. To enable callouts for a style annotation, create a class property with the controller type you are enabling interaction for:
+1) To enable callouts for a style annotation, create a class property with the controller type you are enabling interaction for:
 
 ```swift
 class ViewController: UIViewController {
     var mapView: MGLMapView!
     var circleAnnotationController: MGLCircleAnnotationController!
 }
+```
 
-2. The style annotation must contain a title and must implement two delegate methods using the [Maps SDK for iOS](https://docs.mapbox.com/ios/api/maps/). The first method, `annotationCanShowCallout` should return `true`. The second method, `viewFor annotation:` should return an empty
+2) The style annotation must contain a title and must implement two delegate methods using the [Maps SDK for iOS](https://docs.mapbox.com/ios/api/maps/). The first method, `annotationCanShowCallout` should return `true`. The second method, `viewFor annotation:` should return an empty
 `MGLAnnotationView` matching the size of the style annotation's shape, as shown below.
 
 ```swift
@@ -146,9 +131,19 @@ extension ViewController : MGLMapViewDelegate {
 
 ## Supported properties
 
-Each style annotation class has a specific set of style and layout properties that can be assigned. These properties mirror the same values specified in the [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/). Below is a list of supported properties on each style annotation class along with its corresponding property within the Mapbox Style Specification.
+Each `MGLStyleAnnotation` class can be assigned a specific set of properties to configure its layout and style. Additionally, `MGLAnnotationController`s also have properties that can assign a specific layout property to all of its child `MGLStyleAnnotation`s. 
+
+All of these properties mirror the same values specified in the [Mapbox Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/). Below is a list of supported properties on each class along with its corresponding property within the Mapbox Style Specification.
 
 **MGLCircleStyleAnnotation**
+- [`circleRadius`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-circle-circle-radius)
+- [`circleColor`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-circle-circle-color)
+- [`circleOpacity`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-circle-circle-opacity)
+- [`circleStrokeWidth`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-circle-circle-stroke-width)
+- [`circleStrokeColor`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-circle-circle-stroke-color)
+- [`circleStrokeOpacity`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-circle-circle-translate)
+
+**MGLCircleAnnotationController**
 - [`circleTranslation`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-circle-circle-translate)
 - [`circleTranslationAnchor`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-circle-circle-translate-anchor)
 - [`circlePitchAlignment`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-circle-circle-pitch-alignment)
@@ -164,11 +159,24 @@ Each style annotation class has a specific set of style and layout properties th
 - [`linePattern`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-line-line-pattern)
 - [`lineWidth`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-line-line-width)
 
+**MGLLineAnnotationController**
+- [`lineCap`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-line-line-cap)
+- [`lineMiterLimit`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-line-line-miter-limit)
+- [`lineRoundLimit`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-line-line-round-limit)
+- [`lineDashPattern`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-line-line-dash-pattern)
+- [`lineTranslation`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-line-line-translation)
+- [`lineTranslationAnchor`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-line-line-translation-anchor)
+
 **MGLPolygonStyleAnnotation**
 - [`fillOpacity`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-fill-fill-opacity)
 - [`fillColor`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-fill-fill-color)
 - [`fillOutlineColor`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-fill-fill-outline-color)
 - [`fillPattern`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-fill-fill-pattern)
+
+**MGLPolygonAnnotationController**
+- [`fillAntialiased`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-fill-fill-antialias)
+- [`fillTranslation`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-fill-fill-translate)
+- [`fillTranslationAnchor`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-fill-fill-translate-anchor)
 
 **MGLSymbolStyleAnnotation**
 
@@ -202,12 +210,49 @@ _Symbol text_
 - [`textHaloWidth`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-symbol-text-halo-width)
 - [`textHaloBlur`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-symbol-text-halo-blur)
 
-**Icon image & symbol text**
+_Icon image & symbol text_
 - [`symbolSortKey`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-symbol-sort-key)
+
+**MGLSymbolAnnotationController**
+
+_Icon images_
+
+- [`iconAllowsOverlap`](https://www.mapbox.com/mapbox-gl-style-spec/#layout-symbol-icon-allow-overlap)
+- [`iconIgnoresPlacement`](https://www.mapbox.com/mapbox-gl-style-spec/#layout-symbol-icon-ignore-placement)
+- [`iconOptional`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-icon-optional)
+- [`iconPadding`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-icon-padding)
+- [`iconPitchAlignment`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-icon-pitch-alignment)
+- [`iconRotationAlignment`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-icon-rotation-alignment)
+- [`iconTextFit`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-icon-text-fit)
+- [`iconTranslation`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-symbol-icon-translate)
+- [`iconTranslationAnchor`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-symbol-icon-translate-anchor)
+- [`keepsIconUpright`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-icon-keep-upright)
+
+_Symbol text_
+
+- [`textAllowsOverlap`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-text-allow-overlap)
+- [`textLineHeight`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-text-line-height)
+- [`textOptional`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-text-optional)
+- [`textPadding`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-text-padding)
+- [`textPitchAlignment`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-text-pitch-alignment)
+- [`textRotationAlignment`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-text-rotation-alignment)
+- [`textVariableAnchor`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-text-variable-anchor)
+- [`textTranslation`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-symbol-text-translate)
+- [`textTranslationAnchor`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#paint-symbol-text-translate-anchor)
+- [`keepsTextUpRight`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-text-keep-upright)
+- [`maximumTextAngle`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-text-max-angle)
+
+_Icon image & symbol text_
+
+- [`symbolAvoidsEdges`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-symbol-avoid-edges)
+- [`symbolPlacement`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-symbol-placement)
+- [`symbolSpacing`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-symbol-spacing)
+- [`symbolZOrder`](https://docs.mapbox.com/mapbox-gl-js/style-spec/#layout-symbol-symbol-z-order)
+
 
 ## Support
 
-Mapbox Framework Extensions are still in active development, and as such APIs are subject to rapid change. If you have questions or feedback, please open a [new issue](https://github.com/mapbox/map-extensions-ios/issues/new) in this repository.
+These extensions are still in active development, and as such APIs are subject to rapid change. If you have questions or feedback, please open a [new issue](https://github.com/mapbox/map-extensions-ios/issues/new) in this repository.
 
 If you'd like to report a bug, please include as much information as possible so that we can quickly reproduce the issue.
 

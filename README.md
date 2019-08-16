@@ -1,15 +1,9 @@
-# Mapbox Map Framework Extensions for iOS
+# Mapbox Map Extensions for iOS
 
 Mapbox Map framework extensions allow you to add additional functionality to your iOS application when using our Maps SDK.
 
-## Available framework extensions
-- Annotations (_Coming soon_)
-
-## Installation
-_Coming soon_
-
-## Additional Support
-_Coming soon_
+## Available extensions
+- [Annotations extension](annotations-extension/README.md)
 
 # Code of conduct
 
