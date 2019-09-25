@@ -2,7 +2,8 @@
 
 The Mapbox Annotation Extension is lightweight library you can use with the Mapbox Maps SDK to quickly add basic shapes to a map.
 
-⚠️ This product is currently in active alpha development, and is not suitable for production usage. ⚠️
+⚠️ This product is currently in active alpha development, and is not intended for usage in production. We welcome feedback
+from developers in issues. ⚠️
 
 ## Installation
 
