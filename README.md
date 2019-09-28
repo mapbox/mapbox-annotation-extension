@@ -1,19 +1,38 @@
 # Mapbox Annotation Extension for iOS
 
-The Mapbox Annotation Extension is lightweight library you can use with the Mapbox Maps SDK to quickly add basic shapes to a map.
+The Mapbox Annotation Extension is a lightweight library you can use with the Mapbox Maps SDK for iOS to quickly add basic shapes, icons, and other annotations to a map.
 
-⚠️ This product is currently in active alpha development, and is not intended for usage in production. We welcome feedback
-from developers in issues. ⚠️
+This extension leverages the power of runtime styling with an object oriented approach to simplify the creation and styling of annotations.
+
+⚠️ This product is currently in active beta development, is not intended for production usage. ⚠️
 
 ## Installation
 
-### Download and unzip the latest release
+### Using CocoaPods
+To install the Mapbox Annotation Extension using CocoaPods:
 
-Reach out to us to get a copy of the binaries [through our contact page](https://support.mapbox.com/).
+Create a Podfile with the following specification:
 
-### Embed the framework in your project
+pod 'MapboxAnnotationExtension', '0.0.1-beta.1'
+Run pod repo update && pod install and open the resulting Xcode workspace.
+
+### Using Carthage
+Alternatively, to install the Mapbox Annotation Extension using Carthage:
+
+Create a Cartfile with the following dependency:
+
+github "mapbox/mapbox-annotation-extension" ~> 0.0.1-beta.1
+Run carthage update --platform iOS to build just the iOS dependencies.
+
+### Manual Installation
+
+Download and unzip the latest [release](https://github.com/mapbox/mapbox-annotation-extension/releases).
 
 Drag **MapboxAnnotationExtension.framework** into your project's Embedded Binaries section in the project editor. In the sheet that appears, make sure "Copy items if needed" is checked, then select Finish.
+
+### Annotation extension examples
+
+You can find a sample application within this project by running the `annotationapp` target.
 
 ## Usage
 

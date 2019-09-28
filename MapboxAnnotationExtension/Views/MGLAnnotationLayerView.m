@@ -233,7 +233,7 @@
         
     }
     
-    [self.annotationController.mapView selectAnnotation:annotation animated:YES];
+    [self.annotationController.mapView selectAnnotation:annotation animated:YES completionHandler:nil];
 }
 
 - (void)closeAnnotationCallout:(id<MGLFeature>)annotation {

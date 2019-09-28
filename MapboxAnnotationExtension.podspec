@@ -1,21 +1,39 @@
 Pod::Spec.new do |s|
 
+  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.name         = "MapboxAnnotationsExtension"
-  s.version      = "0.0.1-alpha.1"
+  s.name         = "MapboxAnnotationExtension"
+  s.version      = "0.0.1-beta.1"
 
   s.summary      = "Extension to support Mapbox's runtime styling annotations api."
   s.description  = "Provides an object oriented annotation api around runtime styling."
   s.homepage     = "http://www.mapbox.com/"
-  # s.screenshots  = ""
-  s.license      = { :type => 'Mapbox Terms of Service' }
+
+   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+   s.license = { :type => "ISC", :file => "LICENSE.md" }
+
+   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
   s.authors      = { 'Mapbox' => 'mobile@mapbox.com' }
   s.social_media_url   = "http://twitter.com/mapbox"
 
+  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
   s.platform     = :ios, "9.0"
 
-  s.source       = { :git => "https://github.com/mapbox/map-extensions-ios.git", :tag => "#{s.version}" }
-  s.source_files  = "MapboxAnnotationsExtension", "MapboxAnnotationsExtension/Annotations/*.{h,m}", "MapboxAnnotationsExtension/Controllers/*.{h,m}", "MapboxAnnotationsExtension/Categories/*.{h,m}"
-  s.dependency "Mapbox-iOS-SDK"
+  # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+  s.source       = { :git => "https://github.com/mapbox/mapbox-annotation-extension.git", :tag => "#{s.version}" }
+
+  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+  s.source_files  = "MapboxAnnotationExtension/**/*.{h,m}"
+
+  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+  s.requires_arc = true
+  s.module_name = "MapboxAnnotationExtension"
+  s.dependency "Mapbox-iOS-SDK", "~> 5.2"
 
 end
