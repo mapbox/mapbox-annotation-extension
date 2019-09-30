@@ -13,16 +13,21 @@ To install the Mapbox Annotation Extension using CocoaPods:
 
 Create a Podfile with the following specification:
 
+```
 pod 'MapboxAnnotationExtension', '0.0.1-beta.1'
-Run pod repo update && pod install and open the resulting Xcode workspace.
+```
+Run `pod repo update && pod install` and open the resulting Xcode workspace.
 
 ### Using Carthage
 Alternatively, to install the Mapbox Annotation Extension using Carthage:
 
 Create a Cartfile with the following dependency:
 
+```
 github "mapbox/mapbox-annotation-extension" ~> 0.0.1-beta.1
-Run carthage update --platform iOS to build just the iOS dependencies.
+```
+
+Run `carthage update --platform iOS` to build just the iOS dependencies.
 
 ### Manual Installation
 

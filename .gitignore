@@ -12,3 +12,4 @@ xcuserdata
 Pods
 *.xcworkspace
 *.xcuserstate
+*documentation/api-docs/

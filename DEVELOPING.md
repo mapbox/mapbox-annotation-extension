@@ -11,7 +11,7 @@ Generate the .xcworkspace for the framework extension by running `pod install`.
 This project is documented with [Jazzy](https://github.com/realm/jazzy) (v0.10.0). To generate documentation from code comments, run the following command from the root directory of this project:
 
 ```
-./annotations-framework-extension/documentation/generate_docs.sh
+./documentation/generate_docs.sh
 ```
 
 ## Testing
