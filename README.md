@@ -1,12 +1,30 @@
 # Mapbox Annotation Extension for iOS
 
+---
+
+⚠️ **This product is currently experimental, is not intended for production usage.** ⚠️
+
+---
+
 The Mapbox Annotation Extension is a lightweight library you can use with the Mapbox Maps SDK for iOS to quickly add basic shapes, icons, and other annotations to a map.
 
 This extension leverages the power of runtime styling with an object oriented approach to simplify the creation and styling of annotations.
 
-⚠️ This product is currently in active beta development, is not intended for production usage. ⚠️
-
 ## Installation
+
+Before following any of the below installation instructions, you will need to configure your machine to download Mapbox Maps SDK for iOS, which is a dependency of this project. Go to your Mapbox account dashboard and create an access token that has the `DOWNLOADS:READ` scope. 
+
+PLEASE NOTE: This is not the same as your production Mapbox API token. Make sure to keep it private and do not insert it into any `Info.plist file`. 
+
+Then, create a file named `.netrc` in your home directory if it doesn’t already exist, then add the following lines to the end of the file:
+
+```
+machine api.mapbox.com 
+  login mapbox
+  password PRIVATE_MAPBOX_API_TOKEN
+```
+
+where _PRIVATE_MAPBOX_API_TOKEN_ is your Mapbox API token with the `DOWNLOADS:READ` scope. You can now continue the installation process with CocoaPods or manually.
 
 ### Using CocoaPods
 To install the Mapbox Annotation Extension using CocoaPods:
@@ -14,20 +32,10 @@ To install the Mapbox Annotation Extension using CocoaPods:
 Create a Podfile with the following specification:
 
 ```
-pod 'MapboxAnnotationExtension', '0.0.1-beta.1'
+pod 'MapboxAnnotationExtension', '0.0.1-beta.2'
 ```
+
 Run `pod repo update && pod install` and open the resulting Xcode workspace.
-
-### Using Carthage
-Alternatively, to install the Mapbox Annotation Extension using Carthage:
-
-Create a Cartfile with the following dependency:
-
-```
-github "mapbox/mapbox-annotation-extension" ~> 0.0.1-beta.1
-```
-
-Run `carthage update --platform iOS` to build just the iOS dependencies.
 
 ### Manual Installation
 
@@ -35,7 +43,12 @@ Download and unzip the latest [release](https://github.com/mapbox/mapbox-annotat
 
 Drag **MapboxAnnotationExtension.framework** into your project's Embedded Binaries section in the project editor. In the sheet that appears, make sure "Copy items if needed" is checked, then select Finish.
 
-### Annotation extension examples
+
+### Carthage & Swift Package Manager
+
+Carthage and Swift Package Manager ("SPM") are currently not supported (see [#64](https://github.com/mapbox/mapbox-annotation-extension/issues/64)).
+
+## Demo application
 
 You can find a sample application within this project by running the `annotationapp` target.
 
@@ -277,7 +290,9 @@ _Icon image & symbol text_
 
 ## Support
 
-These extensions are still in active development, and as such APIs are subject to rapid change. If you have questions or feedback, please open a [new issue](https://github.com/mapbox/map-extensions-ios/issues/new) in this repository.
+Please note that this is an experimental project and is subject to change.
+
+If you have questions or feedback, please open a [new issue](https://github.com/mapbox/map-extensions-ios/issues/new) in this repository.
 
 If you'd like to report a bug, please include as much information as possible so that we can quickly reproduce the issue.
 
