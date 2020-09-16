@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name         = "MapboxAnnotationExtension"
-  s.version      = "0.0.1-beta.1"
+  s.version      = "0.0.1-beta.2"
 
   s.summary      = "Extension to support Mapbox's runtime styling annotations api."
   s.description  = "Provides an object oriented annotation api around runtime styling."
@@ -34,6 +34,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.module_name = "MapboxAnnotationExtension"
-  s.dependency "Mapbox-iOS-SDK", "~> 5.2"
+  s.dependency "Mapbox-iOS-SDK", "~> 6.0"
 
 end
