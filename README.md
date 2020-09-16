@@ -2,7 +2,7 @@
 
 ---
 
-⚠️ **This product is currently experimental, is not intended for production usage.** ⚠️
+⚠️ **This project is currently experimental, is not intended for production usage.** ⚠️
 
 ---
 
